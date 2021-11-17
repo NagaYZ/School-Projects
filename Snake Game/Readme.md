@@ -1,10 +1,10 @@
 # Snake Game
-##Compilation
+## Compilation
 To compile simply use:
 ```
 make
 ```
-##Execution
+## Execution
 ```
 ./Snake
 ```
