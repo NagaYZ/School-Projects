@@ -22,3 +22,8 @@ niveau6.txt
 Use "Vérifier" button to verify your grid.<br/>
 Use "Indice" button to get a hint.<br/>
 Use "Résoudre" button to solve the grid.(may take a while on huge grid).<br/>
+Use the arrow to cancel action.
+
+## Screenshot
+
+![Capture](Capture.PNG)
