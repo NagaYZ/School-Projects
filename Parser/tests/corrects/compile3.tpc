@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int add(int a,int b){
+    return a + b;
+}
+
+int sub(int a,int b){
+    if(a < b){
+        return a-b;
+    }
+    return b-a;
+}
+        
+int main(void){
+    int a;
+    int b;
+    int c;
+    reade(a);
+    print(a+b);
+    while(a > 0){
+        reade(a);
+        print(a/b); 
+        if(a < b){
+            sub(a,b);
+        }
+        if(a < c){
+            sub(a,c);
+        }
+        add(a,a);
+    }
+}

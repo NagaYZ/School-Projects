@@ -1,0 +1,13 @@
+
+cha change(char a){
+	return 2;
+}
+
+
+int main() {
+    char a ;
+    while( a < 2){
+        print(a)
+        a = a-1;
+	}
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+
+
+
+int max(int a, int b){  if(a < b){
+    return b;
+  }   return a;
+}
+
+
+int main(void){  int a, b;  int b ;
+  reade(a);
+
+
+
+  print(max(a,b));}

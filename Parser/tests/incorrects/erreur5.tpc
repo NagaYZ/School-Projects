@@ -1,0 +1,22 @@
+sub(a,b){
+    return a-b;
+}
+
+int add(int a, int b){
+    return a+n;
+}
+
+int main(){
+    int a = 0;
+    int b = 3
+    char n = 'a';
+    b = n;
+    readc(b);
+    reade(n);
+    if(n == 'a')[
+        print(a);
+    ]
+    b + n;
+    +;
+    ();
+}

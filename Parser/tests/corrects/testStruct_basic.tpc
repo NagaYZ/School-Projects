@@ -1,0 +1,24 @@
+struct test {int test1; char test2;};
+
+
+int a;
+char un;
+
+struct test machin(struct test truc1, int truc2, char truc3) {
+
+    return truc1;
+}
+
+
+
+int main(void) {
+
+    struct test t;
+
+    a = 1; un = 'a';
+    t = machin(t, a, un);
+
+    print(a); print(un);
+
+    return 0;
+}

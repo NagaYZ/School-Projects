@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct NomDeVotreStructure
+{
+    int variable1;
+    int variable2;
+    int autreVariable;
+    int nombreDecimal;
+};
+
+struct NomDeVotreStructure aro, ariasqf,ezaeok;
+
+struct a fuc(void){
+	char a;
+	return 1;
+}
+int funct(struct NomDeVotreStructure a, int b,int a, struct NomDeVotreStructure aze){
+	int a;
+	return a+b;
+}
+int main(void){
+	int a;
+	int b,d;
+	return 1;
+}

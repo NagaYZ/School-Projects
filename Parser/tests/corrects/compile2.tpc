@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int a;
+    reade(a);
+    print(a);
+    a = a+2;
+    reade(a);
+    print(a);
+    return 0;
+}

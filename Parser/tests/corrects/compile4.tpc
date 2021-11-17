@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+char changecharina(char c){
+    return 'a';
+}
+
+int main (void){
+    char c;
+    readc(c);
+    print(c);
+    c = changecharina;
+    print(c);
+}
+    
+
+    

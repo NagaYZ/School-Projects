@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct Arobaz{ int a; int b; int chouz; }chaz;
+
+int main(void){
+	int a;
+	return 0;
+}
