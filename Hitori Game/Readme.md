@@ -1,4 +1,5 @@
 # Hitori Game
+Python
 ## Execution
 ```
 py hitory.py
