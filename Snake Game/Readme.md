@@ -8,3 +8,5 @@ make
 ```
 ./Snake
 ```
+## ScreenShot
+![Example1](img/1.png)
