@@ -28,6 +28,6 @@ the file or image from which the quadtree was built.
 <br/>▪ Exit, leave the program.
 
 ## ScreenShots
-![Example1](/img/1.png)
+![Example1](img/1.png)
 <br/>
-![Example2](/img/2.png)
+![Example2](img/2.png)
