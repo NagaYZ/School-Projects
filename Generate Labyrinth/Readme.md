@@ -9,5 +9,21 @@ make
 ```
 ./labyrinthe
 ```
+## How to Use
+The user enters the command:
+./labyrinthe [--option]
+Where the options are:
+▪ --unique (unique solution)
+▪ --acces (makes all cells accessible, making the maze harder to solve)
+▪ --mode=texte (ascii mode)
+▪ --taille=HxW (with H(height) <=400 et W(width) <=300)
+▪ --attente=X (speed in ms, 0 is instant, with X >= 0) (if not then wait for keyboard input)
+▪ --graine=X (seed) 
+By default the size is 6x8 and the mode is graphic.
+
+## ScreenShot
+
+![Example2](gif/ex.png)
+
 ## Gif
 ![Example1](gif/ex.gif)
