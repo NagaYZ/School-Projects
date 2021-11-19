@@ -9,7 +9,7 @@ make
 ./Boggle
 ```
 ## How to Play
-Selected letters is highlighted, move with arrow key.
+Selected letter is highlighted, move with arrow key.
 
 The rules for playing Boggle are as follows:<br/>
 
