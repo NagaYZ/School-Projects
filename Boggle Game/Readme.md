@@ -8,3 +8,5 @@ make
 ```
 ./Boggle
 ```
+## ScreenShot
+![Example1](img/ex.png)
