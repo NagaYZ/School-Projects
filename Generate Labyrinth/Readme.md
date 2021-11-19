@@ -9,3 +9,5 @@ make
 ```
 ./labyrinthe
 ```
+## Gif
+![Example1](gif/ex.gif)
