@@ -1,4 +1,4 @@
-# Generating Random Labyrinth using MLV Library (IGM)
+# 15 Puzzle game using MLV Library (IGM)
 ## Installation
 To install go to [MLV Library](http://www-igm.univ-mlv.fr/~boussica/mlv/index.html), select your language and follow the installation instructions.
 ## Compile
