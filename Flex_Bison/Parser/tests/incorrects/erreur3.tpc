@@ -1,0 +1,15 @@
+int add(int a,int b){
+	return a + b;
+}
+
+int main(void){
+  a = add(b,c);
+  print(a);
+  while(a > 0){
+    print(a);
+    reade(a);
+    if(a < 1){
+      print(b,c);
+		}
+	}
+}

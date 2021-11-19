@@ -1,8 +1,0 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
-struct lepére{
-    int a;
-    int b
-}sorry;

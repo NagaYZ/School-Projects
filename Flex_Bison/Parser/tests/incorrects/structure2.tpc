@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct Arobaz (int a,int b){ int a; int b; int chouz; }
+}chaz
