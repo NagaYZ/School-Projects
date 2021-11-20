@@ -1,0 +1,150 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b52624c7c6034ad5ba1bd15b99cf3622\transformed\design-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\d20fcacfdb442399e4c27d6743cbd636\transformed\appcompat-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\8688286c66d2000d3fb211eff9f8f31c\transformed\constraint-layout-1.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\339fcfcc71056d1b6c31ec61f07806e7\transformed\recyclerview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\34e58726abeb25e492e3b50859beaedc\transformed\play-services-maps-7.0.0\AndroidManifest.xml:16:1-20:12
+MERGED from [com.android.support:support-v13:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\87a1e7d16c31152928ed1582143f1ed1\transformed\support-v13-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\38f5ef9a981cb9e0c5c7a70fe0aaa626\transformed\support-v4-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\84d98e2365328bb54097c583e810421b\transformed\cardview-v7-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\f7dc259bfcdb6cf7f62ca5f3928cbcdc\transformed\support-fragment-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\e3128e01f0b88a6f43f01661cd37b66a\transformed\animated-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\ea086e6f0f28390753e906bb2f7d70f8\transformed\support-core-ui-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\db1f146099527926247ea97b9215eb4d\transformed\support-core-utils-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\452c227bba61464d29c84cd1137fde8e\transformed\support-vector-drawable-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\dc8ce043412a62de9b487f1b20fa6efc\transformed\transition-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b4e7f4dc31d96dce939a2a06775095e8\transformed\support-media-compat-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\6bbd5605b9ca54c0ca42f5612137a7cf\transformed\support-compat-27.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\9c3dd9e40c30ac37abef96104978a64f\transformed\livedata-core-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\ab237f6e683bace20c277c2588b3041f\transformed\viewmodel-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\e8d86f0b86b18587434915ee06e7aca4\transformed\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\cec8b78607a2ec1495aa4f9d3e61a249\transformed\runtime-1.1.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:3:5-43
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:5:22-78
+application
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:7:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\8688286c66d2000d3fb211eff9f8f31c\transformed\constraint-layout-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\8688286c66d2000d3fb211eff9f8f31c\transformed\constraint-layout-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\34e58726abeb25e492e3b50859beaedc\transformed\play-services-maps-7.0.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\34e58726abeb25e492e3b50859beaedc\transformed\play-services-maps-7.0.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:20:5-24:19
+	android:supportsRtl
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:11:9-41
+	android:configChanges
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:16:9-39
+	android:icon
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:18:9-56
+	android:allowBackup
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:14:9-40
+activity#com.example.yassine.test_app.MainActivity
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:20:9-28:20
+	android:exported
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:20:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml:26:27-74
+uses-sdk
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b52624c7c6034ad5ba1bd15b99cf3622\transformed\design-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b52624c7c6034ad5ba1bd15b99cf3622\transformed\design-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\d20fcacfdb442399e4c27d6743cbd636\transformed\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\d20fcacfdb442399e4c27d6743cbd636\transformed\appcompat-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\8688286c66d2000d3fb211eff9f8f31c\transformed\constraint-layout-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\8688286c66d2000d3fb211eff9f8f31c\transformed\constraint-layout-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\339fcfcc71056d1b6c31ec61f07806e7\transformed\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\339fcfcc71056d1b6c31ec61f07806e7\transformed\recyclerview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\34e58726abeb25e492e3b50859beaedc\transformed\play-services-maps-7.0.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-maps:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\34e58726abeb25e492e3b50859beaedc\transformed\play-services-maps-7.0.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v13:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\87a1e7d16c31152928ed1582143f1ed1\transformed\support-v13-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\87a1e7d16c31152928ed1582143f1ed1\transformed\support-v13-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\38f5ef9a981cb9e0c5c7a70fe0aaa626\transformed\support-v4-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\38f5ef9a981cb9e0c5c7a70fe0aaa626\transformed\support-v4-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\84d98e2365328bb54097c583e810421b\transformed\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\84d98e2365328bb54097c583e810421b\transformed\cardview-v7-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\f7dc259bfcdb6cf7f62ca5f3928cbcdc\transformed\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\f7dc259bfcdb6cf7f62ca5f3928cbcdc\transformed\support-fragment-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\e3128e01f0b88a6f43f01661cd37b66a\transformed\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\e3128e01f0b88a6f43f01661cd37b66a\transformed\animated-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\ea086e6f0f28390753e906bb2f7d70f8\transformed\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\ea086e6f0f28390753e906bb2f7d70f8\transformed\support-core-ui-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\db1f146099527926247ea97b9215eb4d\transformed\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\db1f146099527926247ea97b9215eb4d\transformed\support-core-utils-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\452c227bba61464d29c84cd1137fde8e\transformed\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\452c227bba61464d29c84cd1137fde8e\transformed\support-vector-drawable-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\dc8ce043412a62de9b487f1b20fa6efc\transformed\transition-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\dc8ce043412a62de9b487f1b20fa6efc\transformed\transition-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b4e7f4dc31d96dce939a2a06775095e8\transformed\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\b4e7f4dc31d96dce939a2a06775095e8\transformed\support-media-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\6bbd5605b9ca54c0ca42f5612137a7cf\transformed\support-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\rasen\.gradle\caches\transforms-3\6bbd5605b9ca54c0ca42f5612137a7cf\transformed\support-compat-27.1.1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\9c3dd9e40c30ac37abef96104978a64f\transformed\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\9c3dd9e40c30ac37abef96104978a64f\transformed\livedata-core-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\ab237f6e683bace20c277c2588b3041f\transformed\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\ab237f6e683bace20c277c2588b3041f\transformed\viewmodel-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\e8d86f0b86b18587434915ee06e7aca4\transformed\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\e8d86f0b86b18587434915ee06e7aca4\transformed\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\cec8b78607a2ec1495aa4f9d3e61a249\transformed\runtime-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\rasen\.gradle\caches\transforms-3\cec8b78607a2ec1495aa4f9d3e61a249\transformed\runtime-1.1.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\rasen\Desktop\tp\Licence\Runlife\app\src\main\AndroidManifest.xml
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:7.0.0] C:\Users\rasen\.gradle\caches\transforms-3\9b4b0595a1346f2b0e8cf9447c4bd49a\transformed\play-services-base-7.0.0\AndroidManifest.xml:22:13-58
