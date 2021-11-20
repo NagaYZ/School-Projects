@@ -12,11 +12,11 @@ def initplateau(n): #Créer le plateau en n*n , 'n' choisis par l'utilisateur
 def dessine_plateau(plateau,a,b,u,d,theme):
     n = len(plateau)
     if theme == 'noel':
-            image(taille_case*n/2, taille_case*n/2,'theme_noel_jeu.png')
+            image(taille_case*n/2, taille_case*n/2,'img/theme_noel_jeu.png')
     if theme == 'foret':
-            image(taille_case*n/2, taille_case*n/2,'theme_foret_jeu.png')
+            image(taille_case*n/2, taille_case*n/2,'img/theme_foret_jeu.png')
     if theme == 'eau':
-            image(taille_case*n/2, taille_case*n/2,'theme_eau_jeu.png')
+            image(taille_case*n/2, taille_case*n/2,'img/theme_eau_jeu.png')
      
     for i in range(n):
         for j in range(n):
@@ -29,11 +29,11 @@ def dessine_plateau(plateau,a,b,u,d,theme):
             if plateau[i][j] == 1 : #pion 1
                 if n <=6:
                     if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'santa.png',tag='pion1')
+                        image(x+ taille_case/2, y+taille_case/2,'img/santa.png',tag='pion1')
                     if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'feuille.png',tag='pion1')
+                        image(x+ taille_case/2, y+taille_case/2,'img/feuille.png',tag='pion1')
                     if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'poisson.png',tag='pion1')
+                        image(x+ taille_case/2, y+taille_case/2,'img/poisson.png',tag='pion1')
                     elif theme ==0:
                         cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='black',remplissage='black',tag='pion1')
                 if n>6:
@@ -42,11 +42,11 @@ def dessine_plateau(plateau,a,b,u,d,theme):
             if plateau[i][j] == 2 :#pion 2
                 if n <=6:
                     if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'renne.png',tag='pion2')
+                        image(x+ taille_case/2, y+taille_case/2,'img/renne.png',tag='pion2')
                     if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'bois.png',tag='pion2')
+                        image(x+ taille_case/2, y+taille_case/2,'img/bois.png',tag='pion2')
                     if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'poulpe.png',tag='pion2')
+                        image(x+ taille_case/2, y+taille_case/2,'img/poulpe.png',tag='pion2')
                     elif theme==0:
                         cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='blue',remplissage='blue',tag='pion2')
                 if n>6:
@@ -55,11 +55,11 @@ def dessine_plateau(plateau,a,b,u,d,theme):
             if plateau[i][j]==3 : #interdit (case bloqué)
                 if n <=6:
                     if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'boule.png',tag='interdit')
+                        image(x+ taille_case/2, y+taille_case/2,'img/boule.png',tag='interdit')
                     if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'feu.png',tag='interdit')
+                        image(x+ taille_case/2, y+taille_case/2,'img/feu.png',tag='interdit')
                     if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'requin.png',tag='interdit')
+                        image(x+ taille_case/2, y+taille_case/2,'img/requin.png',tag='interdit')
                     elif theme ==0:
                         cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),remplissage='red',tag='interdit') 
                 if n>6:
@@ -326,7 +326,7 @@ if __name__ == '__main__':
          
         if choix == 1:
             efface_tout()
-            image(600/2,(600+100)/2,'accueil.png')
+            image(600/2,(600+100)/2,'img/accueil.png')
             texte(600/2,160, "Choisissez :", ancrage='center', taille='80',couleur='blanchedalmond', police='Calibri')
             rectangle(100,400,400,300,couleur='white')
             rectangle(200,450,500,550,couleur='white')
@@ -337,68 +337,68 @@ if __name__ == '__main__':
         if jouer == 0 :# page d'accueil
             efface_tout()
             rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
-            image(taille_case*n/2,(taille_case*n+100)/2,'accueil.png')
+            image(taille_case*n/2,(taille_case*n+100)/2,'img/accueil.png')
             texte(taille_case*n/2,160, "ISOLA", ancrage='center', taille='100',couleur='blanchedalmond', police='Calibri')
             texte(taille_case*n/2,400, "Jouer" , ancrage='center', taille='35',couleur='red', police='Calibri')
             rectangle(taille_case*n/3,350,taille_case*n/1.5,450,couleur='white')
-            image(taille_case*n/9,50,'personnaliser.png',tag='perso')
+            image(taille_case*n/9,50,'img/personnaliser.png',tag='perso')
             rectangle(taille_case*n/1.45,25,taille_case*n/1.1,75,couleur='white')
             texte(taille_case*n/1.25,50, "regle" , ancrage='center', taille='25',couleur='white',police='Calibri italic')
              
         if custom ==1: # page personnalisation
             efface_tout()   
             rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
-            image(taille_case*n/2,(taille_case*n+100)/2,'accueil.png')
+            image(taille_case*n/2,(taille_case*n+100)/2,'img/accueil.png')
             texte(taille_case*n/2,100, "Choississez un thème", ancrage='center', taille='40',couleur='blanchedalmond')
-            image(110,350,'theme_noel.png',tag='noel'),
-            image(taille_case*n/2,350,'theme_foret.png',tag='foret')
-            image(490,350,'theme_eau.png',tag='eau')
-            image(taille_case*n/2,545,'back.png',tag='back')
+            image(110,350,'img/theme_noel.png',tag='noel'),
+            image(taille_case*n/2,350,'img/theme_foret.png',tag='foret')
+            image(490,350,'img/theme_eau.png',tag='eau')
+            image(taille_case*n/2,545,'img/back.png',tag='back')
             
         if regle == 1 :
             efface_tout()
-            image(taille_case*n/2,700/2,'accueil.png')
+            image(taille_case*n/2,700/2,'img/accueil.png')
             texte(taille_case*n/2,180, "REGLE : \n \n La position initiale des pions est laissée au choix des joueurs.\n Les adversaires jouent à tour de rôle. Jouer consiste à effectuer \n les deux étapes suivantes : \n - deplacer son pion \n - choisir une case à bloqué \n \n BUT : \n \n Bloqué son adversaire a l'aide des cases a blqué \n ou de son propre pions " , ancrage='center', taille='17',couleur='white', police='Calibri')
             ligne(4, 38, 72, 38, couleur='white', epaisseur=3)
             ligne(7, 263, 60, 263, couleur='white', epaisseur=3)
-            image(taille_case*n/2,545,'back.png',tag='back')
+            image(taille_case*n/2,545,'img/back.png',tag='back')
 ## 2 Joueur           
         if ordi ==0:    
             if jouer == 1 : # placer le premier pion
                 efface_tout()
-                image(taille_case*n/2,700/2,'accueil.png')
+                image(taille_case*n/2,700/2,'img/accueil.png')
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 texte(taille_case*n/2,200, "Placer un pion", ancrage='center', taille='30',couleur='maroon')
                 texte(taille_case*n/2,taille_case*n/2, "Appuyer pour commencer ! ", ancrage='center', taille='30',couleur='maroon')
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
                 
             if jouer == 2 : # 1 pion
                 efface_tout()
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 plateau = initplateau(n)
                 dessine_plateau(plateau,a,b,taille_case*n,taille_case*n,theme)
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
             
             if jouer == 3 : # placer le deuxieme pion
                 efface_tout()
-                image(taille_case*n/2,700/2,'accueil.png')
+                image(taille_case*n/2,700/2,'img/accueil.png')
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 texte(taille_case*n/2,200, "Placer le deuxième pion", ancrage='center', taille='30',couleur='maroon')
                 texte(taille_case*n/2,taille_case*n/2, "Appuyer pour continuer ! ", ancrage='center', taille='30',couleur='maroon')
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
                 
             if jouer == 4 : # 2 pion
                 efface_tout()
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 dessine_plateau(plateau,a,b,u,d,theme)
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
             
             if jouer == 5 :#Bonne chance
                 efface_tout()
-                image(taille_case*n/2,700/2,'accueil.png')
+                image(taille_case*n/2,700/2,'img/accueil.png')
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 texte(taille_case*n/2,200, "Bonne chance !", ancrage='center', taille='30',couleur='maroon')
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
             
             if jouer >= 6:  # PARTIE JOUEUR VS JOUEUR COMMENCE
                 efface_tout()
@@ -407,7 +407,7 @@ if __name__ == '__main__':
                     efface_tout()
                     dessine_plateau(plateau,a,b,u,d,theme)
                     rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
-                    image(557,655,'back_jeu.png') # fleche annuler coup 
+                    image(557,655,'img/back_jeu.png') # fleche annuler coup 
                     
                     if condition_mort(plateau,a,b,u,d):#mort
                         jouer=10
@@ -528,32 +528,32 @@ if __name__ == '__main__':
         if ordi ==1:  # PARTIE JOUEUR VS IA COMMENCE
             if jouer == 1 : # placer le premier pion
                 efface_tout()
-                image(taille_case*n/2,700/2,'accueil.png')
+                image(taille_case*n/2,700/2,'img/accueil.png')
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 texte(taille_case*n/2,200, "Placer un pion", ancrage='center', taille='30',couleur='maroon')
                 texte(taille_case*n/2,taille_case*n/2, "Appuyer pour commencer ! ", ancrage='center', taille='30',couleur='maroon')
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
                 
             if jouer == 2 : # 1 pion
                 efface_tout()
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 plateau = initplateau(n)
                 dessine_plateau(plateau,a,b,taille_case*n,taille_case*n,theme)
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
             
                 
             if jouer == 4 : # 2 pion
                 efface_tout()
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 dessine_plateau(plateau,a,b,u,d,theme)
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
             
             if jouer == 5 :#Bonne chance
                 efface_tout()
-                image(taille_case*n/2,700/2,'accueil.png')
+                image(taille_case*n/2,700/2,'img/accueil.png')
                 rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                 texte(taille_case*n/2,200, "Bonne chance !", ancrage='center', taille='30',couleur='maroon')
-                image(557,655,'back_jeu.png') # fleche annuler coup
+                image(557,655,'img/back_jeu.png') # fleche annuler coup
                 
             if jouer >=6:
                     
@@ -564,7 +564,7 @@ if __name__ == '__main__':
                     dessine_plateau(plateau,a,b,u,d,theme)
                     rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
                     if jouer ==8:
-                        image(557,655,'back_jeu.png') # fleche annuler coup 
+                        image(557,655,'img/back_jeu.png') # fleche annuler coup 
                     
                     if condition_mort(plateau,a,b,u,d):#mort
                         jouer=10
@@ -641,32 +641,3 @@ if __name__ == '__main__':
                             jouer,interdit =1,0 # retour au début
                             l,l2,l_int_1,l_int_2=[],[],[],[] # Réinistialisation des listes de sauvegardes des coups
                             break 
-                        
-                        
-                            
-                
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
