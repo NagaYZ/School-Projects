@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BabaIsYou" default="jar" basedir=".">
+    <description>    BabaIsYou build file.    </description>
+    <property name="Sources" value="src"/>
+    <property name="Classes" value="classes"/>
+    <property name="JavaDoc" value="docs/doc"/>
+    <property name="Lib" value="lib/zen5.jar"/>
+    <property name="Release" value="15"/>
+
+    <target name="compile" description="Compilation project" >
+        <condition property="java15">
+        <javaversion atleast="15"/>        	
+        </condition>
+        <javac classpath="lib/zen5.jar" includeantruntime="false" release="${Release}" srcdir="${Sources}" destdir="${Classes}">
+        	<compilerarg line="--enable-preview"/>
+        </javac>
+        	<echo message="Compilation completed." />
+    </target>
+
+    <target name="jar" depends="compile">    	
+        <jar destfile="baba.jar" basedir="${Classes}" manifest="MANIFEST.MF">          	
+            <fileset dir="classes" />
+            <zipfileset includes="**/*.class" src="lib/zen5.jar" />        	
+        </jar>
+        <echo message="Executable created." />
+    </target>
+
+    <target name="javadoc" description="Create javadoc">
+        <javadoc classpath="lib/zen5.jar" sourcepath="${Sources}" destdir="${JavaDoc}" additionalparam="-Xdoclint:none" >
+        	<arg line="--enable-preview --release 15"/>        	
+            <fileset dir="${Sources}">
+                <include name="*/*.java" />
+            </fileset>
+        </javadoc>
+        <echo message="Javadoc is generate." />
+    </target>
+
+    <target name="clean">
+        <delete dir="${Classes}" />
+        <mkdir dir="${Classes}" />
+        <delete dir="${JavaDoc}" />
+        <mkdir dir="docs/doc" />
+        <delete file="baba.jar" />
+        <echo message="Project is clean." />
+    </target>
+</project>
