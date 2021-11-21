@@ -122,21 +122,28 @@ def annuler_coup(l,l2,l_int_1,l_int_2,plateau,a,b,u,d,i,j,back,interdit,jouer):
           
 def casesdispo(plateau,a,b,u,d,i,j,jouer):
     if jouer == 6 :
-        for x in range(-1,2): #pion1
-            for y in range(-1,2):
-                if (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x == -1) or (b == n-1 and y == -1) :#cas particulier pion 1 
-                    continue
-                if plateau[a-x][b-y]== 0:# chaque case vide autour du pion1 devienne jaune
-                    k,o = (b-y) * taille_case , (a-x) * taille_case
-                    rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='gold')
+        casesdispo_pion1(plateau,a,b,u,d,i,j)
+        
     if jouer == 7 :
-        for x in range(-1,2):#pion2
-            for y in range(-1,2):
-                if (u == 0 and x == 1) or (d == 0 and y == 1) or (u == n-1 and x == -1) or (d == n-1 and y == -1) :#cas particulier pion 2
-                    continue
-                if plateau[u-x][d-y] == 0:# chaque case vide autour du pion2 devienne verte
-                    k,o = (d-y) * taille_case , (u-x) * taille_case
-                    rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='green')
+        casesdispo_pion2(plateau,a,b,u,d,i,j)
+                    
+def casesdispo_pion1(plateau,a,b,u,d,i,j):
+    for x in range(-1,2): #pion1
+        for y in range(-1,2):
+            if (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x == -1) or (b == n-1 and y == -1) :#cas particulier pion 1 
+                continue
+            if plateau[a-x][b-y]== 0:# chaque case vide autour du pion1 devienne jaune
+                k,o = (b-y) * taille_case , (a-x) * taille_case
+                rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='gold')
+  
+def casesdispo_pion2(plateau,a,b,u,d,i,j):
+    for x in range(-1,2):#pion2
+        for y in range(-1,2):
+            if (u == 0 and x == 1) or (d == 0 and y == 1) or (u == n-1 and x == -1) or (d == n-1 and y == -1) :#cas particulier pion 2
+                continue
+            if plateau[u-x][d-y] == 0:# chaque case vide autour du pion2 devienne verte
+                k,o = (d-y) * taille_case , (u-x) * taille_case
+                rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='green')
     
 def condition_mort(plateau,a,b,u,d):
     return mort_pion1(plateau,a,b,u,d) or mort_pion2(plateau,a,b,u,d)
