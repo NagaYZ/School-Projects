@@ -7,12 +7,12 @@ function comparer(array2,id){
 	tab.push(array2);
 	flip.unshift(id);
 	
-	if (tab.length == 2 ) {		
-		if (tab[0] == tab[1] && flip[0]!= flip[1] ) {			
+	if (tab.length === 2 ) {		
+		if (tab[0] === tab[1] && flip[0]!== flip[1] ) {			
 			complet.push(1);					
 		}
 
-		else if (tab[0] !== tab[1] ||	flip[0]== flip[1] ){
+		else if (tab[0] !== tab[1] ||	flip[0]=== flip[1] ){
 			//delai
 			setTimeout(function() {
 				document.getElementById("num"+flip[0]+"").src="http://monge.univ-mlv.fr/ens/Licence/L1/2018-2019/progweb/src/td08/blank.png";
@@ -42,7 +42,7 @@ function siclick(pos_carte,pos_div){
 }
 function shuffleCards(length) {
 	var cards = [];
-	var liste=['0','1','2','3','4','5','6','7','0','1','2','3','4','5','6','7'];
+	var liste=["0","1","2","3","4","5","6","7","0","1","2","3","4","5","6","7"];
 	for(var i = 0; i < length; i++) {
 		var random1 = Math.floor(liste.length*Math.random()); 
 		cards.push(liste[random1]);

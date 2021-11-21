@@ -29,7 +29,7 @@ function tirer(){
 		draw_missile();
 		direction_missile();		
 
-		if((duree_vie>=300) || (missile.toucher =="touché")){	//missile disparait si il a touché un vaisseau ou s'il a parcourut la moitie du canvas.
+		if((duree_vie>=300) || (missile.toucher ==="touché")){	//missile disparait si il a touché un vaisseau ou s'il a parcourut la moitie du canvas.
 			duree_vie=0;	
 			bullet_speed=3;						
 			missile.display="ready"; //pret a tirer un aure missile

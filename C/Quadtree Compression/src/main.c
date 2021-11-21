@@ -60,7 +60,8 @@ int main(int argc, char *argv[]){
 
     /*TEXT TO GET INPUT*/
     char* texte= NULL;
-    char *texte1 = (char*) malloc(sizeof(char)); *texte1 = '\0';
+    char *texte1 = (char*) malloc(sizeof(char));
+    *texte1 = '\0';
     if(texte1 == NULL)
     {
         fprintf(stderr, "Can't allocate texte\n");

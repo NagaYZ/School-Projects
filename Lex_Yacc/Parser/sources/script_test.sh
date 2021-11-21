@@ -15,8 +15,8 @@ test() {
 
     for f in ${files[@]}; do
         (( n++ ))
-        printf "(%02d/%02d) - %s" $n ${#files[@]} "Testing $f..." | tee -a tests_log.txt
-        ./as < $f | { printf "\n"; cat; } >> tests_log.txt
+        printf "(%02d/%02d) - %s" "$n" "${#files[@]}" "Testing $f..." | tee -a tests_log.txt
+        ./as < "$f" | { printf "\n"; cat; } >> tests_log.txt
         feedback=$PIPESTATUS      
         if [ "$feedback" = "$2" ]; then
             (( passed++ ))
@@ -34,11 +34,11 @@ test() {
         
     done
 
-    if [ $passed -eq ${#files[@]} ]; then
+    if [ "$passed" -eq "${#files[@]}" ]; then
     	printf "${GREEN}"
 		printf "$passed/${#files[@]} tests passed! \n\n" | tee -a tests_log.txt
 		printf "${NOCOLOR}"
-    elif [ $passed = "0" ]; then
+    elif [ "$passed" = "0" ]; then
         printf "${RED}"
 		printf "$passed/${#files[@]} tests passed! \n\n" | tee -a tests_log.txt
 		printf "${NOCOLOR}"

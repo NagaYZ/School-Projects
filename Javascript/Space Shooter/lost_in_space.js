@@ -7,6 +7,45 @@ const vitesse=3;
 window.addEventListener("keydown", function (e) {keys[e.keyCode] = true;}); //quand on appuie sur une touche.
 window.addEventListener("keyup", function (e) {	 keys[e.keyCode] = false;});//quand on relache sur une touche.
 
+class Alien{
+	constructor(x,y){
+		this.x=x;
+		this.y=y;		
+		this.img = new Image();
+		this.img.src = 'spaceshooter/PNG/Enemies/enemyGreen1.png';
+	}
+	draw(canvas) {
+		canvas.drawImage(this.img, this.x, this.y, 40, 40);
+	}
+}
+
+
+
+class Player{
+	constructor(x,y){
+		this.x=x;
+		this.y=y;
+		this.img = new Image();
+		this.img.src = "spaceshooter/PNG/playerShip3_red.png";
+	}
+	draw(canvas) {
+		canvas.drawImage(this.img, this.x, this.y, 50, 50);
+	}
+}
+
+class Missile{
+	constructor(x,y){
+		this.x=x;
+		this.y=y;		
+		this.img = new Image();
+		this.img.src = "spaceshooter/PNG/Lasers/laserRed01.png";
+	}
+	draw(canvas) {
+		canvas.drawImage(this.img, this.x, this.y, 10, 40);
+	}
+}
+
+
 function jouer() {
 	world["PLAYER"] = new Player(275, 550);	
 	world["ALIEN1"]= new Alien(0,60);
@@ -47,6 +86,13 @@ function deplacement_vaisseau(){
 		}      	
 	}
 }
+function draw() {
+	var canvas = document.getElementById("game_area").getContext("2d");
+	var context = document.getElementById("game_area");
+	canvas.clearRect(0,0,context.height,context.width);
+	world["PLAYER"].draw(canvas);	
+}
+
 function gameLoop() {
 	draw();
 	mort_alien();
@@ -56,47 +102,3 @@ function gameLoop() {
 	victoire();
 }
 
-function draw() {
-	var canvas = document.getElementById("game_area").getContext("2d");
-	var context = document.getElementById("game_area");
-	canvas.clearRect(0,0,context.height,context.width);
-	world["PLAYER"].draw(canvas);	
-}
-
-
-
-class Player{
-	constructor(x,y){
-		this.x=x;
-		this.y=y;
-		this.img = new Image();
-		this.img.src = 'spaceshooter/PNG/playerShip3_red.png';
-	}
-	draw(canvas) {
-		canvas.drawImage(this.img, this.x, this.y, 50, 50);
-	}
-}
-
-class Missile{
-	constructor(x,y){
-		this.x=x;
-		this.y=y;		
-		this.img = new Image();
-		this.img.src = 'spaceshooter/PNG/Lasers/laserRed01.png';
-	}
-	draw(canvas) {
-		canvas.drawImage(this.img, this.x, this.y, 10, 40);
-	}
-}
-
-class Alien{
-	constructor(x,y){
-		this.x=x;
-		this.y=y;		
-		this.img = new Image();
-		this.img.src = 'spaceshooter/PNG/Enemies/enemyGreen1.png';
-	}
-	draw(canvas) {
-		canvas.drawImage(this.img, this.x, this.y, 40, 40);
-	}
-}

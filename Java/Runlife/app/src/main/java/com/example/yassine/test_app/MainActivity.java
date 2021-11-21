@@ -70,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 menuItem.setChecked(true);
                 break;
             default:
-                fragmentClass = ProgrammesFragment.class;}
+                fragmentClass = ProgrammesFragment.class;
+                break;
+            }
         try {
 
             myFragment = (Fragment) fragmentClass.newInstance();

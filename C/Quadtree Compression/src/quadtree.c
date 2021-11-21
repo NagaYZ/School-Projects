@@ -115,7 +115,7 @@ void build_color_quad_image(ColorQuadtree *quad,MLV_Image* image,int circle){
 	
 	ColorQuadtree pire_zone=NULL,tmp_pire_zone =NULL;
 	int zone;
-	int x=0,y=0;
+	int x,y;
 
 	int* tab;
 	/*first part, get average color of whole image, and split in four square with their average color*/
@@ -173,8 +173,8 @@ void build_bw_quad_image(BWQuadtree *quad,MLV_Image* image,int circle){
 	/* build bw quadtree from image*/
 	
 	BWQuadtree pire_zone=NULL,tmp_pire_zone =NULL;
-	int zone=0;
-	int x=0,y=0;
+	int zone;
+	int x,y;
 
 	int* tab;
 	/*first part, get average color of whole image, and split in four square with their average color*/

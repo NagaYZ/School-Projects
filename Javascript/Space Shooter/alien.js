@@ -148,14 +148,14 @@ function direction_alien(){
 	
 
 	////////////////////////////////////////// alien 8 et 4 rebondisse et  monte
-	if (((alien8.y >= 560) && autre_descente !=undefined)&&alien8.x>=555){	
+	if (((alien8.y >= 560) && autre_descente !==undefined)&&alien8.x>=555){	
 		
 		rebond["rebond1"]+=10/100; //ajout de 10% de vitesse
 		first_descente=undefined;
 		monte_8_4=1;			
 	}
 
-	if (((alien8.y >= 560) && autre_descente !=undefined)&&alien8.x<=0){
+	if (((alien8.y >= 560) && autre_descente !==undefined)&&alien8.x<=0){
 
 		rebond["rebond1"]+=10/100; //ajout de 10% de vitesse
 		first_descente=undefined;		
@@ -225,7 +225,7 @@ function direction_alien(){
 		autre_descente=0;		
 	}
 	/////////////////////////////////// alien 7 et 3 rebondisse et  monte
-	if (((alien7.y >= 560) && autre_descente !=undefined)&&alien7.x>=555){					
+	if (((alien7.y >= 560) && autre_descente !==undefined)&&alien7.x>=555){					
 		monte_7_3=2;	
 		rebond["rebond2"]+=10/100; //ajout de 10% de vitesse
 		if (autre_descente != "none"){
@@ -233,10 +233,10 @@ function direction_alien(){
 		}
 
 	}
-	if(((alien7.y >= 560) && autre_descente !=undefined)&&alien7.x<=0){				
+	if(((alien7.y >= 560) && autre_descente !==undefined)&&alien7.x<=0){				
 		monte_7_3=1;	
 		rebond["rebond2"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != "none"){
+		if (autre_descente !== "none"){
 			autre_descente=2;
 		}
 		
@@ -297,18 +297,18 @@ function direction_alien(){
 	}
 
 	//////////////////////////////////////////alien	6 et 2 rebondisse et monte
-	if (((alien6.y >= 560) && autre_descente !=undefined)&&alien6.x <=0){
+	if (((alien6.y >= 560) && autre_descente !==undefined)&&alien6.x <=0){
 		monte_6_2=1;	
 		rebond["rebond3"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != "none"){
+		if (autre_descente !== "none"){
 			autre_descente=4;
 		}
 				
 	}
-	if (((alien6.y >= 560) && autre_descente !=undefined)&&alien6.x >=555){		
+	if (((alien6.y >= 560) && autre_descente !==undefined)&&alien6.x >=555){		
 		monte_6_2=2;	
 		rebond["rebond3"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != "none"){
+		if (autre_descente !== "none"){
 			autre_descente=4;
 		}		
 	}	
@@ -355,12 +355,12 @@ function direction_alien(){
 		autre_descente=4;		
 	}
 	////////////////////////////////////// alien 5 et 1 rebondisse et monte
-	if (((alien5.y >= 560) && autre_descente!=undefined)&&alien5.x <=0){
+	if (((alien5.y >= 560) && autre_descente!==undefined)&&alien5.x <=0){
 		monte_5_1=2;	
 		rebond["rebond4"]+=10/100;	 //ajout de 10% de vitesse
 		autre_descente="none";	
 	}	
-	if (((alien5.y >= 560) && autre_descente!=undefined)&&alien5.x>=555){
+	if (((alien5.y >= 560) && autre_descente!==undefined)&&alien5.x>=555){
 		monte_5_1=1;		
 		rebond["rebond4"]+=10/100; //ajout de 10% de vitesse
 		autre_descente="none";	
