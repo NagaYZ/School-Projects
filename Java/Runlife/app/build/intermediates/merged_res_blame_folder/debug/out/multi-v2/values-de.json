@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rasen\\Desktop\\tp\\Licence\\Runlife\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\rasen\\Desktop\\tp\\GitHub\\School-Projects\\Java\\Runlife\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rasen\\.gradle\\caches\\transforms-3\\6bbd5605b9ca54c0ca42f5612137a7cf\\transformed\\support-compat-27.1.1\\res\\values-de\\values-de.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\rasen\\Desktop\\tp\\Licence\\Runlife\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn-rBD\\values-bn-rBD.xml",
+            "outputFile": "C:\\Users\\rasen\\Desktop\\tp\\GitHub\\School-Projects\\Java\\Runlife\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn-rBD\\values-bn-rBD.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rasen\\.gradle\\caches\\transforms-3\\9b4b0595a1346f2b0e8cf9447c4bd49a\\transformed\\play-services-base-7.0.0\\res\\values-bn-rBD\\common_strings.xml",
