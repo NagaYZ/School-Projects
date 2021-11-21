@@ -90,25 +90,22 @@ def positioninterdit(plateau,i,j):
     plateau[i][j]=3 
 
 def annuler_coup(l,l2,l_int_1,l_int_2,plateau,a,b,u,d,i,j,back,interdit,jouer):
-    
-    if back == 0:
-        if len(l) == 0 or ((a,b) != l[len(l)-1]):
-            l.append((a,b))#pion1
-        if len(l2) == 0 or (u,d) != l2[len(l2)-1]  :  
-            l2.append((u,d))#pion2
-        if (interdit == 1 and jouer == 7) or (ordi==1 and interdit==1):
-            if  len(l_int_1) == 0 or (i == ligne_interdit1 and (i,j) != l_int_1[len(l_int_1)-1]):
-                l_int_1.append((i,j))#interdit pion1
-        if interdit==1 and jouer == 6:
-            if  len(l_int_2)==0 or (i == ligne_interdit2 and (i,j) != l_int_2[len(l_int_2)-1]):
-                l_int_2.append((i,j))#interdit pion2
-                
     if back ==1:
         return retour_pion1(l,l2,l_int_1,l_int_2,plateau) or retour_pion2(l,l2,l_int_1,l_int_2,plateau)
-            
-            
-       
-            
+   
+    if len(l) == 0 or ((a,b) != l[len(l)-1]):
+        l.append((a,b))#pion1
+    if len(l2) == 0 or (u,d) != l2[len(l2)-1]  :  
+        l2.append((u,d))#pion2
+    if interdit == 1 :
+        if jouer == 7 or ordi==1 :
+            if  len(l_int_1) == 0 or (i == ligne_interdit1 and (i,j) != l_int_1[len(l_int_1)-1]):
+                l_int_1.append((i,j))#interdit pion1
+        if jouer == 6:
+            if  len(l_int_2)==0 or (i == ligne_interdit2 and (i,j) != l_int_2[len(l_int_2)-1]):
+                l_int_2.append((i,j))#interdit pion2
+    
+        
 def retour_pion1(l,l2,l_int_1,l_int_2,plateau):
     if len(l_int_1) == len(l_int_2) and len(l) > len(l2):#retour en arriere pion1
         x,y=l[len(l)-1]
@@ -165,35 +162,38 @@ def casesdispo_pion2(plateau,a,b,u,d,i,j):
                 rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='green')
     
 def condition_mort(plateau,a,b,u,d):
-    return mort_pion1(plateau,a,b,u,d) or mort_pion2(plateau,a,b,u,d)
+    return mort_pion1(plateau,a,b) or mort_pion2(plateau,u,d)
 
-    
-        
-def mort_pion1(plateau,a,b,u,d):
+def mort_pion1(plateau,a,b):
     compteur1 = 0
     for x in range(-1,2):           #pion1
         for y in range(-1,2):
-            if (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x ==-1) or (b == n-1 and y ==-1)  :#cas particulier pion 1 
+            if is_on_borders(a,b,x,y)  :#cas particulier pion 1 
                 continue
             if plateau[a-x][b-y] != 0:
                 compteur1 +=1
-            if (((a == 0 and b == 0) or (a == n-1 and b == n-1)  or (a == 0 and b == n-1) or (a == n-1 and b == 0)) and compteur1 == 4) or ((a == 0 or a == n-1 or b == 0 or b == n-1) and compteur1 == 6) or (compteur1 ==9) :#cas particulier pion 1 dans les coins
+            if (is_in_corners(a,b,x,y) and compteur1 == 4) or (is_in_corners(a,b,x,y) and compteur1 == 6) or (compteur1 ==9) :#cas particulier pion 1 dans les coins
                 if ordi ==0:
                     texte(65,640,"Joueur 2 vous avez gagné",couleur='black',taille='18',police='Calibri italic')
                     return True
-                if ordi ==1:
-                    texte(65,640,"L'ordinateur à gagné",couleur='black',taille='18',police='Calibri italic')
-                    return True
+                texte(65,640,"L'ordinateur à gagné",couleur='black',taille='18',police='Calibri italic')
+                return True
+                
+def is_on_borders(a,b,x,y):
+    return (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x ==-1) or (b == n-1 and y ==-1)  :#cas particulier bord
     
-def mort_pion2(plateau,a,b,u,d):
-    compteur2=0
+def is_in_corners(a,b,x,y):
+    return ((a == 0 and b == 0) or (a == n-1 and b == n-1)  or (a == 0 and b == n-1) or (a == n-1 and b == 0)) or (a == 0 or a == n-1 or b == 0 or b == n-1)
+    
+def mort_pion2(plateau,u,d):
+    compteur2 = 0
     for x in range(-1,2):           #pion2
         for y in range(-1,2):
-            if (u == 0 and x == 1) or (d == 0 and y == 1) or (u == n-1 and x ==-1) or (d == n-1 and y ==-1) :#cas particulier pion 2 
+            if is_on_borders(u,d,x,y)  :#cas particulier pion 2
                 continue
             if plateau[u-x][d-y] != 0:#nombre de cases vide trouver
                 compteur2 +=1
-            if (((u == 0 and d == 0) or (u == n-1 and d == n-1)  or (u == 0 and d == n-1) or (u == n-1 and d == 0)) and compteur2 == 4) or ((u == 0 or u == n-1 or d == 0 or d == n-1) and compteur2 == 6) or (compteur2 == 9) :#cas particulier pion 2 
+            if (is_in_corners(u,d,x,y) and compteur2 == 4) or (is_in_corners(u,d,x,y) and compteur2 == 6) or (compteur2 == 9) :#cas particulier pion 2  
                 texte(65,640,"Joueur 1 vous avez gagné",couleur='black',taille='18',police='Calibri italic')
                 return True
                 
