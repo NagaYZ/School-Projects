@@ -14,12 +14,12 @@ test() {
     passed=0
 
     for f in ${files[@]}; do
-        let n++
+        (( n++ ))
         printf "(%02d/%02d) - %s" $n ${#files[@]} "Testing $f..." | tee -a tests_log.txt
         ./as < $f | { printf "\n"; cat; } >> tests_log.txt
         feedback=$PIPESTATUS      
         if [ "$feedback" = "$2" ]; then
-            let passed++
+            (( passed++ ))
             if [ "$feedback" == "$2" ]; then
             	printf "${GREEN}"
         		printf "SUCCESS.\n" | tee -a tests_log.txt

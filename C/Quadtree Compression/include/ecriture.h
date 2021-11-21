@@ -6,7 +6,6 @@
 #include "lecture.h"
 
 struct bit_write {
-
 	unsigned char buf;/*byte buffer*/
 	unsigned char save_first;/*save the first byte to rewrite it with the padding at the end*/
 	int padding;/*number of bit in the padding(=3) */

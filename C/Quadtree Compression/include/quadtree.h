@@ -8,7 +8,6 @@
 rgba are the color...
 each node has 4 children , initialized to NULL*/
 typedef struct color_quadtree{
-
 	int x;
 	int y;
 	int zone;/* zone (1,512) <=> size of the square, 1 = single pixel*/
@@ -16,29 +15,24 @@ typedef struct color_quadtree{
 	unsigned char g;/*green (0,255)*/
 	unsigned char b;/*blue (0,255)*/
 	unsigned char a;/*alpha (0,255)*/
-
 	struct color_quadtree* NO;
 	struct color_quadtree* NE;
 	struct color_quadtree* SE;
 	struct color_quadtree* SO;
-
 }*ColorQuadtree;
 
 /*BW Quadtree structure, x,y are the NO coordinates of the node, zone its size(height/width)
 BLACK is the color , 1 for BLACK and 0 for WHITE, added -1 for NODE to distinguish node/leaf when minimizing the quadtree
 each node has 4 children , initialized to NULL*/
 typedef struct bw_quadtree{
-
 	int x;
 	int y;
 	int zone;/* zone (1,512) <=> size of the square*/
 	int BLACK;/* 1 BLACK , 0 WHITE, -1 NODE*/
-
 	struct bw_quadtree* NO;
 	struct bw_quadtree* NE;
 	struct bw_quadtree* SE;
 	struct bw_quadtree* SO;
-
 }*BWQuadtree;/*!< BW = BlackWhite*/
 
 
