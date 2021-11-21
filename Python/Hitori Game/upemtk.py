@@ -96,8 +96,8 @@ class CustomCanvas:
         self.root.update()
 
         if CustomCanvas._on_osx:
-            system('''/usr/bin/osascript -e 'tell app "Finder" \
-                   to set frontmost of process "Python" to true' ''')
+            subprocess.call('''/usr/bin/osascript -e 'tell app "Finder" \
+                   to set frontmost of process "Python" to true' ''',shell=False)
 
     def update(self):
         t = time()
