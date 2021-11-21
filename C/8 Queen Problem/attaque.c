@@ -28,11 +28,11 @@ int calculer_cases_attaques(Position *pos, Case c){
 	}
 
 	if((c+1) % 8 != 0 && c > 7){ 			/*Cas de la diagonale sud-est*/
-		for(i = c; (i+1)%8 != 0 && c > 7; i = i-7)
+		for(i = c; (i+1)%8 != 0; i = i-7)
 			allumer_bit(pos, i-7);
 	}
 	if((c%8)!=0 && c > 7){					/*Cas de la diagonale sud-ouest */
-		for(i = c; (i%8)!=0 && c > 7; i-=9)
+		for(i = c; (i%8)!=0; i-=9)
 			allumer_bit(pos, i-9);
 	}
 

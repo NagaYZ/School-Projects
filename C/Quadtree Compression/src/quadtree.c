@@ -114,7 +114,7 @@ void build_color_quad_image(ColorQuadtree *quad,MLV_Image* image,int circle){
 	/* build color quadtree from image*/
 	
 	ColorQuadtree pire_zone=NULL,tmp_pire_zone =NULL;
-	int zone=0;
+	int zone;
 	int x=0,y=0;
 
 	int* tab;

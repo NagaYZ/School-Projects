@@ -2,6 +2,20 @@
 let duree_vie=0;
 let bullet_speed=3;
 
+function draw_missile() {	
+	var canvas = document.getElementById('game_area').getContext('2d');
+	world["MISSILE"].draw(canvas);	
+
+}
+function direction_missile(){
+	var missile = world["MISSILE"];	
+	
+	missile.y-=bullet_speed;
+	bullet_speed=bullet_speed*99/100; // garde 99% de sa vitesse a chaque tour.
+	duree_vie+=3;
+}
+
+
 function tirer(){	
 	var player = world["PLAYER"];
 	world["MISSILE"] = new Missile(player.x+20, player.y-20);	
@@ -25,19 +39,4 @@ function tirer(){
 		}			
 	}
 }
-
-function draw_missile() {	
-	var canvas = document.getElementById('game_area').getContext('2d');
-	world["MISSILE"].draw(canvas);	
-
-}
-function direction_missile(){
-	var missile = world["MISSILE"];	
-	
-	missile.y-=bullet_speed;
-	bullet_speed=bullet_speed*99/100; // garde 99% de sa vitesse a chaque tour.
-	duree_vie+=3;
-}
-
-
 

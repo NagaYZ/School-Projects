@@ -1,4 +1,7 @@
 "use strict";
+function message_victoire(){	
+	location.reload();
+}
 
 function victoire(){
 	let compteur =0;
@@ -13,6 +16,3 @@ function victoire(){
 	}
 }
 
-function message_victoire(){	
-	location.reload();
-}

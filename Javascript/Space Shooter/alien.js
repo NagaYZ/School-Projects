@@ -39,12 +39,52 @@ function spawn_alien(){
 }
 
 function draw_alien() {	
-	var canvas = document.getElementById('game_area').getContext('2d');
+	var canvas = document.getElementById("game_area").getContext("2d");
 	for (var i=1;i<9;i++){
-		if (world["ALIEN"+i+""].display != 'dead'){// on dessine un alien qui si il est "en vie".
+		if (world["ALIEN"+i+""].display !== "dead"){// on dessine un alien qui si il est "en vie".
 			world["ALIEN"+i+""].draw(canvas);
 		}
 	}		
+}
+
+function left_side(alien){alien.x -= vitesse;}
+
+function right_side(alien){alien.x += vitesse;}
+
+function up(alien){alien.y -= cran;}
+
+function down(alien){alien.y += cran;}
+
+function left_side_rebond_8_4(alien){
+	alien.x -= vitesse * rebond["rebond1"] + vitesse;		
+}
+
+function right_side_rebond_8_4(alien){
+	alien.x += vitesse * rebond["rebond1"] + vitesse;
+}
+
+function left_side_rebond_7_3(alien){
+	alien.x -= vitesse * rebond["rebond2"] + vitesse;		
+}
+
+function right_side_rebond_7_3(alien){
+	alien.x += vitesse * rebond["rebond2"] + vitesse;
+}
+
+function left_side_rebond_6_2(alien){
+	alien.x -= vitesse * rebond["rebond3"] + vitesse;		
+}
+
+function right_side_rebond_6_2(alien){
+	alien.x += vitesse * rebond["rebond3"] + vitesse;
+}
+
+function left_side_rebond_5_1(alien){
+	alien.x -= vitesse * rebond["rebond4"] + vitesse;		
+}
+
+function right_side_rebond_5_1(alien){
+	alien.x += vitesse * rebond["rebond4"] + vitesse;
 }
 
 function direction_alien(){
@@ -188,7 +228,7 @@ function direction_alien(){
 	if (((alien7.y >= 560) && autre_descente !=undefined)&&alien7.x>=555){					
 		monte_7_3=2;	
 		rebond["rebond2"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != 'none'){
+		if (autre_descente != "none"){
 			autre_descente=2;
 		}
 
@@ -196,7 +236,7 @@ function direction_alien(){
 	if(((alien7.y >= 560) && autre_descente !=undefined)&&alien7.x<=0){				
 		monte_7_3=1;	
 		rebond["rebond2"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != 'none'){
+		if (autre_descente != "none"){
 			autre_descente=2;
 		}
 		
@@ -260,7 +300,7 @@ function direction_alien(){
 	if (((alien6.y >= 560) && autre_descente !=undefined)&&alien6.x <=0){
 		monte_6_2=1;	
 		rebond["rebond3"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != 'none'){
+		if (autre_descente != "none"){
 			autre_descente=4;
 		}
 				
@@ -268,7 +308,7 @@ function direction_alien(){
 	if (((alien6.y >= 560) && autre_descente !=undefined)&&alien6.x >=555){		
 		monte_6_2=2;	
 		rebond["rebond3"]+=10/100; //ajout de 10% de vitesse
-		if (autre_descente != 'none'){
+		if (autre_descente != "none"){
 			autre_descente=4;
 		}		
 	}	
@@ -318,12 +358,12 @@ function direction_alien(){
 	if (((alien5.y >= 560) && autre_descente!=undefined)&&alien5.x <=0){
 		monte_5_1=2;	
 		rebond["rebond4"]+=10/100;	 //ajout de 10% de vitesse
-		autre_descente='none';	
+		autre_descente="none";	
 	}	
 	if (((alien5.y >= 560) && autre_descente!=undefined)&&alien5.x>=555){
 		monte_5_1=1;		
 		rebond["rebond4"]+=10/100; //ajout de 10% de vitesse
-		autre_descente='none';	
+		autre_descente="none";	
 	}	
 
 	if  (monte_5_1===1){
@@ -378,7 +418,7 @@ function direction_alien(){
 	if ((alien8.y >=561)&& monte_8_4 ===undefined){
 		
 		redescente_8_4=0;		
-		autre_descente='none';	
+		autre_descente="none";	
 	}
 		
 	///////////////////////////// alien 7 et 3 rebondisse et descende
@@ -473,43 +513,4 @@ function direction_alien(){
 		redescente_5_1=0;
 	}
 
-	function left_side(alien){alien.x -= vitesse;}
-
-	function right_side(alien){alien.x += vitesse;}
-
-	function up(alien){alien.y -= cran;}
-
-	function down(alien){alien.y += cran;}
-
-	function left_side_rebond_8_4(alien){
-		alien.x -= vitesse * rebond["rebond1"] + vitesse;		
-	}
-
-	function right_side_rebond_8_4(alien){
-		alien.x += vitesse * rebond["rebond1"] + vitesse;
-	}
-
-	function left_side_rebond_7_3(alien){
-		alien.x -= vitesse * rebond["rebond2"] + vitesse;		
-	}
-
-	function right_side_rebond_7_3(alien){
-		alien.x += vitesse * rebond["rebond2"] + vitesse;
-	}
-
-	function left_side_rebond_6_2(alien){
-		alien.x -= vitesse * rebond["rebond3"] + vitesse;		
-	}
-
-	function right_side_rebond_6_2(alien){
-		alien.x += vitesse * rebond["rebond3"] + vitesse;
-	}
-
-	function left_side_rebond_5_1(alien){
-		alien.x -= vitesse * rebond["rebond4"] + vitesse;		
-	}
-
-	function right_side_rebond_5_1(alien){
-		alien.x += vitesse * rebond["rebond4"] + vitesse;
-	}
 }

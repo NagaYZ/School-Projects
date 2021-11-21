@@ -123,9 +123,9 @@ void build_bw_quad_file_aux(struct bit_read* b, BWQuadtree* quad, FILE* in){
 	/*build a black and white quadtree from file.qtn*/
 	unsigned char c;
 	/*while there is something to read in the buffer*/
-	while((c = read_bit(&(*b))) != -1){
+	while((c = read_bit(b)) != -1){
 		if(c == 1){/*if its a 1(leaf) then read next bit to get leaf color*/
-			if((c = read_bit(&(*b))) != -1){
+			if((c = read_bit(b)) != -1){
 				*quad = allocate_bw_quad(0,0,1,c);
 				return;								
 			}

@@ -48,6 +48,7 @@ __all__ = [
 
 class CustomCanvas:
     """
+
     Classe qui encapsule tous les objets tkinter nécessaires à la création
     d'un canevas.
     """
@@ -478,7 +479,7 @@ def touche_pressee(keysym):
 #############################################################################
 
 def donne_ev():
-    """ 
+    """
     Renvoie immédiatement l'événement en attente le plus ancien,
     ou ``None`` si aucun événement n'est en attente.
     """
@@ -489,9 +490,11 @@ def donne_ev():
         return None
 
     return __canevas.ev_queue.popleft()
-    
+
 def attend_ev():
-    """Attend qu'un événement ait lieu et renvoie le premier événement qui
+    """
+
+    Attend qu'un événement ait lieu et renvoie le premier événement qui
     se produit."""
     while True:
         ev = donne_ev()
@@ -501,7 +504,9 @@ def attend_ev():
 
 
 def attend_clic_gauche():
-    """Attend qu'un clic gauche sur la fenêtre ait lieu et renvoie ses
+    """
+
+    Attend qu'un clic gauche sur la fenêtre ait lieu et renvoie ses
     coordonnées. **Attention**, cette fonction empêche la détection d'autres
     événements ou la fermeture de la fenêtre."""
     while True:
@@ -522,7 +527,7 @@ def attend_fermeture():
 
 
 def type_ev(ev):
-    """ 
+    """
     Renvoie une chaîne donnant le type de ``ev``. Les types
     possibles sont 'ClicDroit', 'ClicGauche', 'Touche' et 'Quitte'.
     Renvoie ``None`` si ``evenement`` vaut ``None``.
@@ -531,21 +536,21 @@ def type_ev(ev):
 
 
 def abscisse(ev):
-    """ 
+    """
     Renvoie la coordonnée x associé à ``ev`` si elle existe, None sinon.
     """
     return attribut(ev, 'x')
 
 
 def ordonnee(ev):
-    """ 
+    """
     Renvoie la coordonnée y associé à ``ev`` si elle existe, None sinon.
     """
     return attribut(ev, 'y')
 
 
 def touche(ev):
-    """ 
+    """
     Renvoie une chaîne correspondant à la touche associé à ``ev``,
     si elle existe.
     """
@@ -559,7 +564,7 @@ def attribut(ev, nom):
     t, e = ev
     if hasattr(e, nom):
         return getattr(e, nom)
-    
+
     raise TypeEvenementNonValide(
         "Accès à l'attribut", nom,
         'impossible sur un événement de type', t)

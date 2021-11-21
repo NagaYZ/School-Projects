@@ -20,12 +20,33 @@ function jouer() {
 	var player = world["PLAYER"];
 	world["MISSILE"] = new Missile(player.x, player.y);	
 	var missile = world["MISSILE"];
-	missile.display='ready';
+	missile.display="ready";
 	for (var i=1;i<9;i++){world["ALIEN"+i+""].display="alive";} //tous les aliens sont "en vie".(voir mort.js)
 	window.setInterval(gameLoop, 500/60);
 }
 
-	
+function deplacement_vaisseau(){	
+	var player = world["PLAYER"];
+	var missile = world["MISSILE"];
+
+	if (keys[38] && player.y >=10) { //haut	    	
+		player.y -= vitesse;
+	}
+	else if (keys[40] && player.y <=530) { //bas	    	
+		player.y += vitesse;
+	}
+	else if (keys[37] && player.x >=15) { //gauche	    	
+		player.x -=	vitesse;
+	}	   
+	else if (keys[39] && player.x <= 535) { // droite	    	
+		player.x += vitesse;
+	}
+	else if (keys[32]) { //BARRE ESPACE	    	
+		if( missile.display==="ready"){//si pas d'autre missile lancé en cours de deplacement.(1 missile a la fois)	    		
+			tirer();//missile.js
+		}      	
+	}
+}
 function gameLoop() {
 	draw();
 	mort_alien();
@@ -36,34 +57,13 @@ function gameLoop() {
 }
 
 function draw() {
-	var canvas = document.getElementById('game_area').getContext('2d');
-	var context = document.getElementById('game_area');
+	var canvas = document.getElementById("game_area").getContext("2d");
+	var context = document.getElementById("game_area");
 	canvas.clearRect(0,0,context.height,context.width);
 	world["PLAYER"].draw(canvas);	
 }
 
-function deplacement_vaisseau(){	
-	var player = world["PLAYER"];
-	var missile = world["MISSILE"];
 
-	    if (keys[38] && player.y >=10) { //haut	    	
-	    	player.y -= vitesse;
-	    }
-	    else if (keys[40] && player.y <=530) { //bas	    	
-	        player.y += vitesse;
-	    }
-	    else if (keys[37] && player.x >=15) { //gauche	    	
-	      	player.x -=	vitesse;
-	    }	   
-	    else if (keys[39] && player.x <= 535) { // droite	    	
-	    	player.x += vitesse;
-	    }
-	    else if (keys[32]) { //BARRE ESPACE	    	
-	    	if( missile.display=='ready'){//si pas d'autre missile lancé en cours de deplacement.(1 missile a la fois)	    		
-				tirer();//missile.js
-			}      	
-	    }
-	}
 
 class Player{
 	constructor(x,y){

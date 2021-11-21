@@ -12,7 +12,7 @@ function comparer(array2,id){
 			complet.push(1);					
 		}
 
-		else if (tab[0] != tab[1] ||	flip[0]== flip[1] ){
+		else if (tab[0] !== tab[1] ||	flip[0]== flip[1] ){
 			//delai
 			setTimeout(function() {
 				document.getElementById("num"+flip[0]+"").src="http://monge.univ-mlv.fr/ens/Licence/L1/2018-2019/progweb/src/td08/blank.png";
@@ -40,16 +40,6 @@ function siclick(pos_carte,pos_div){
 	document.getElementById("num"+pos_div+"").src="http://monge.univ-mlv.fr/ens/Licence/L1/2018-2019/progweb/src/td08/lego"+carte+".png";
 	comparer(carte,pos_div);
 }
-
-MemoryGame.prototype.build = function build(div) {
-	var pos = shuffleCards(this.lego.length);
-	
-	for (i in [...Array(this.lego.length*2)]){		
-		var lien_dos = this.dos;			
-		div.innerHTML +="<div><a onClick=siclick("+pos[i]+","+i+");><img id=num"+i+" src=http://monge.univ-mlv.fr/ens/Licence/L1/2018-2019/progweb/src/td08/"+ lien_dos + "></a></div>";
-	}
-}
-
 function shuffleCards(length) {
 	var cards = [];
 	var liste=['0','1','2','3','4','5','6','7','0','1','2','3','4','5','6','7'];
@@ -64,4 +54,14 @@ function shuffleCards(length) {
 	}
 	return cards;
 }
+
+
+MemoryGame.prototype.build = function build(div) {
+	var pos = shuffleCards(this.lego.length);
+	
+	for (i in [...Array(this.lego.length*2)]){		
+		var lien_dos = this.dos;			
+		div.innerHTML +="<div><a onClick=siclick("+pos[i]+","+i+");><img id=num"+i+" src=http://monge.univ-mlv.fr/ens/Licence/L1/2018-2019/progweb/src/td08/"+ lien_dos + "></a></div>";
+	}
+};
 
