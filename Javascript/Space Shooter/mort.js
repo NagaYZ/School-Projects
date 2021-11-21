@@ -68,7 +68,7 @@ function mort_vaisseau(){// mort du vaisseau par colision avec missile ou alien.
 	var alien8 = world["ALIEN8"];
 
 	if (missile.display === "lancé"){ // colision avec missile
-		if ((((missile.x-25<=player.x)&&(player.x<= missile.x+25)) && ((missile.y-15<=player.y)&&( player.y<= missile.y +15))) && missile.display != "none")  {
+		if ((((missile.x-25<=player.x)&&(player.x<= missile.x+25)) && ((missile.y-15<=player.y)&&( player.y<= missile.y +15))) && missile.display !== "none")  {
 			missile.toucher="touché";
 			game_over();
 		}
