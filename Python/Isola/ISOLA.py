@@ -196,10 +196,12 @@ def deplacer_ordi(plateau,u,d):
 ##Programme principale 
 
 n = int(input('entrez le nombre de cases pour le tableau ( ex: 6 pour 6x6 cases) : '))
+plateau = initplateau(n)
 taille_case = 600/n # taille d'une case du plateau
 jouer,regle,interdit,custom,theme,back,ordi,choix = 0,0,0,0,0,0,0,0 # Initialisation des variables
 l,l2,l_int_1,l_int_2=[],[],[],[] #Initialisation des listes de sauvegardes des coups
-
+colonne_interdit2=0
+colonne_interdit=0
 if __name__ == '__main__':
     cree_fenetre(600,700)
     while True: 
@@ -350,7 +352,7 @@ if __name__ == '__main__':
             rectangle(0,taille_case*n,taille_case*n+100,taille_case*n+100,remplissage='whitesmoke',tag='menu') # affichage
             image(taille_case*n/2,(taille_case*n+100)/2,'img/accueil.png')
             texte(taille_case*n/2,100, "Choississez un thème", ancrage='center', taille='40',couleur='blanchedalmond')
-            image(110,350,'img/theme_noel.png',tag='noel'),
+            image(110,350,'img/theme_noel.png',tag='noel')
             image(taille_case*n/2,350,'img/theme_foret.png',tag='foret')
             image(490,350,'img/theme_eau.png',tag='eau')
             image(taille_case*n/2,545,'img/back.png',tag='back')
