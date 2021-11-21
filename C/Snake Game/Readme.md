@@ -1,11 +1,11 @@
 # Snake Game
 ## Compilation
 To compile simply use:
-```
+```Shell
 make
 ```
 ## Execution
-```
+```Shell
 ./Snake
 ```
 ## ScreenShot

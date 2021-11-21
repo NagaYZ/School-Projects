@@ -1,11 +1,11 @@
 # Boggle Game
 ## Compilation
 To compile simply use:
-```
+```Shell
 make
 ```
 ## Execution
-```
+```Shell
 ./Boggle
 ```
 ## How to Play

@@ -2,11 +2,11 @@
 ## Installation
 To install go to [MLV Library](http://www-igm.univ-mlv.fr/~boussica/mlv/index.html), select your language and follow the installation instructions.
 ## Compile
-```
+```Shell
 make
 ```
 ## Execution
-```
+```Shell
 ./project
 ```
 ## User Manual

@@ -11,7 +11,6 @@ from time import time, sleep
 import subprocess
 import sys
 from collections import deque
-from os import system
 
 __all__ = [
     # gestion de fenêtre
@@ -185,8 +184,7 @@ def ferme_fenetre():
 
 def mise_a_jour():
     """
-    Met à jour la fenêtre. Les dessins ne sont affichés qu'après 
-    l'appel à  cette fonction.
+    Met à jour la fenêtre. Les dessins ne sont affichés qu'après l'appel à  cette fonction.
     """
     if __canevas is None:
         raise FenetreNonCree(
@@ -236,11 +234,11 @@ def fleche(ax, ay, bx, by, couleur='black', epaisseur=1, tag=''):
     """
     x, y = (bx - ax, by - ay)
     n = (x**2 + y**2)**.5
-    x, y = x/n, y/n    
+    x, y = x/n, y/n
     points = [bx, by, bx-x*5-2*y, by-5*y+2*x, bx-x*5+2*y, by-5*y-2*x]
     return __canevas.canvas.create_polygon(
-        points, 
-        fill=couleur, 
+        points,
+        fill=couleur,
         outline=couleur,
         width=epaisseur,
         tag=tag)
@@ -258,8 +256,8 @@ def polygone(points, couleur='black', remplissage='', epaisseur=1, tag=''):
     :return: identificateur d'objet
     """
     return __canevas.canvas.create_polygon(
-        points, 
-        fill=remplissage, 
+        points,
+        fill=remplissage,
         outline=couleur,
         width=epaisseur,
         tag=tag)
@@ -290,7 +288,7 @@ def rectangle(ax, ay, bx, by,
 
 
 def cercle(x, y, r, couleur='black', remplissage='', epaisseur=1, tag=''):
-    """ 
+    """
     Trace un cercle de centre ``(x, y)`` et de rayon ``r`` en noir.
 
     :param float x: abscisse du centre
@@ -489,7 +487,7 @@ def donne_ev():
             "La fenêtre n'a pas été créée avec la fonction \"cree_fenetre\".")
     if len(__canevas.ev_queue) == 0:
         return None
-        
+
     return __canevas.ev_queue.popleft()
     
 def attend_ev():
@@ -561,6 +559,7 @@ def attribut(ev, nom):
     t, e = ev
     if hasattr(e, nom):
         return getattr(e, nom)
+    
     raise TypeEvenementNonValide(
         "Accès à l'attribut", nom,
         'impossible sur un événement de type', t)

@@ -1,11 +1,11 @@
 # 8 Queens Problem
 ## Compilation
 To compile simply use:
-```
+```Shell
 make
 ```
 ## Execution
-```
+```Shell
 ./Dame
 ```
 ## How to use
