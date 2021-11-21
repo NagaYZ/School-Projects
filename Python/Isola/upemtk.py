@@ -462,8 +462,8 @@ def capture_ecran(file):
 
     subprocess.call(
         "convert -density 150 -geometry 100% -background white -flatten"
-        " " + file + ".ps " + file + ".png", shell=True)
-    subprocess.call("rm " + file + ".ps", shell=True)
+        " " + file + ".ps " + file + ".png", shell=False)
+    subprocess.call("rm " + file + ".ps", shell=False)
 
 
 def touche_pressee(keysym):
@@ -489,8 +489,7 @@ def donne_ev():
             "La fenêtre n'a pas été créée avec la fonction \"cree_fenetre\".")
     if len(__canevas.ev_queue) == 0:
         return None
-    else:
-        return __canevas.ev_queue.popleft()
+   return __canevas.ev_queue.popleft()
 
 
 def attend_ev():
@@ -562,7 +561,7 @@ def attribut(ev, nom):
     t, e = ev
     if hasattr(e, nom):
         return getattr(e, nom)
-    else:
-        raise TypeEvenementNonValide(
-            "Accès à l'attribut", nom,
-            'impossible sur un événement de type', t)
+    
+    raise TypeEvenementNonValide(
+        "Accès à l'attribut", nom,
+        'impossible sur un événement de type', t)
