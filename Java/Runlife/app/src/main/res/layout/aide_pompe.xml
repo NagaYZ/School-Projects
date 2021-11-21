@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="aide_pompeFragment">
+
+    <ImageView
+        android:id="@+id/image_pompe"
+        android:layout_width="335dp"
+        android:layout_height="292dp"
+        android:layout_marginBottom="191dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/pompe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_valider_pompe"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="58dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginRight="152dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_pompe" />
+
+</android.support.constraint.ConstraintLayout>

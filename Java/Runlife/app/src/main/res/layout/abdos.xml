@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".abdosFragment">
+
+
+    <Button
+        android:id="@+id/btn_niv_f_abdos"
+        android:layout_width="198dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="99dp"
+        android:text="@string/btn_niv_f"
+        app:layout_constraintBottom_toTopOf="@+id/btn_niv_m_abdos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_niv_m_abdos"
+        android:layout_width="198dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginStart="93dp"
+        android:text="@string/btn_niv_m"
+        app:layout_constraintBottom_toTopOf="@+id/btn_niv_h_abdos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_niv_f_abdos" />
+
+    <Button
+        android:id="@+id/btn_niv_h_abdos"
+        android:layout_width="198dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="175dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginStart="93dp"
+        android:text="@string/btn_niv_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_niv_m_abdos" />
+</android.support.constraint.ConstraintLayout>
+

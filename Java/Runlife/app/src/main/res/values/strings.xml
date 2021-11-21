@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">RunLife</string>
+    <string name="main_layout">Main Layout</string>
+    <string name="nav_accueil">Accueil</string>
+    <string name="nav_agenda">Agenda</string>
+    <string name="nav_classement">Classement</string>
+    <string name="nav_programmes">Programmes d\'entraînement</string>
+    <string name="nav_settings">Parametres</string>
+    <string name="nav_logout">Déconnexion</string>
+    <string name="nav_apropos">À Propos</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="abdo">abdo</string>
+    <string name="pecs">pecs</string>
+    <string name="bras">bras</string>
+    <string name="jambes">jambes</string>
+    <string name="validation">"C'EST PARTI !"</string>
+    <string name="switch_anglais">Anglais</string>
+    <string name="text_switch">Langues :</string>
+    <string name="btn_niv_f">FACILE</string>
+    <string name="btn_niv_m">MOYEN</string>
+    <string name="btn_niv_h">DIFFICILE</string>
+    <string name="ic_info"> </string>
+    <string name="nav_imc">IMC</string>
+    <string name="imc_poids">Entrez votre poids en Kilogrammes :</string>
+    <string name="poids_kg">Poids (KG)</string>
+    <string name="imc_taille">Entrez votre taille en Centimètres :</string>
+    <string name="taille_cm">Taille(CM)</string>
+    <string name="imc_btn">JE CALCULE MON IMC</string>
+    <string name="imc_result">Votre IMC est de :</string>
+    <string name="imc_tres_bas">ANOREXIE</string>
+    <string name="imc_bas">MAIGREUR</string>
+    <string name="imc_normale">NORMALE</string>
+    <string name="imc_surpoids">SURPOIDS</string>
+    <string name="imc_obesite_mod">OBÉSITÉ MODÉRÉE</string>
+    <string name="imc_obesite_ele">OBÉSITÉ ÉLEVÉ</string>
+    <string name="imc_obesite_mor">OBÉSITÉ MORBIDE</string>
+    <string name="apropos">Cette application a été développée par : </string>
+    <string name="yassine">Yassine ZAIANI</string>
+    <string name="arno">Arno DAHAN</string>
+    <string name="adrian">Adrian BOURA</string>
+    <string name="popup_close">X</string>
+    <string name="note_text">Votre note est de : </string>
+    <string name="etoile">étoiles</string>
+    <string name="msg_choix_programmes">Vous ne pouvez pas choisir plus d\'un programme !</string>
+    <string name="msg_no_programmes">Vous devez choisir au moins un programme !</string>
+    <string name="imc_poid_rien">Veuillez entrez votre poids !</string>
+    <string name="imc_taille_rien">Veuillez entrez votre taille !</string>
+    <string name="imc_rien">Veuillez entrez votre poids et votre taille !</string>
+    <string name="course_f">CARDIO : 15min de course</string>
+    <string name="course_m">CARDIO : 20min de course</string>
+    <string name="course_h">CARDIO : 30min de course</string>
+    <string name="recup_f">1MIN DE RÉCUPÉRATION</string>
+    <string name="recup_m">1MIN 30SEC DE RÉCUP\'</string>
+    <string name="recup_h">2MIN DE RÉCUPÉRATION</string>
+    <string name="crunch_f">- Crunch au sol 4x10</string>
+    <string name="gainage_f">- Gainage 3x1min</string>
+    <string name="poulie_f">- Extension poulie 3x10</string>
+    <string name="curl_f">- Curl biceps 3x15 (30%)</string>
+    <string name="squat_f">- Squat 4x15</string>
+    <string name="squat_barre_f">- Squat barre 2x10 (50%)</string>
+    <string name="pompe_f">- Pompe 3x10</string>
+    <string name="dev_couche_f">- Développé couché 4x12</string>
+    <string name="crunch_m">- Crunch 4x15</string>
+    <string name="relev_de_jambes_m">- Relevé de jambes 4x10</string>
+    <string name="gainage_tour_du_monde_m">- Gainage tour du monde 3x1min</string>
+    <string name="crunch_h">- Crunch 4x20 avec poids</string>
+    <string name="relev_de_jambes_h">- Relevé de jambes 4x15 avec poids</string>
+    <string name="gainage_tour_du_monde_h">- Gainage tour du monde 3x1min30 avec poids</string>
+    <string name="roue_abdominale_h">- Roue abdominale 3x12</string>
+    <string name="curl_biceps_m">- Curl biceps 4x20 (60%)</string>
+    <string name="extension_poulie_haute_m">- Extension poulie haute 4x15 (50%)</string>
+    <string name="dips_m">- Dips 4x15</string>
+    <string name="dips_h">- Dips 4x15 avec gilet lesté</string>
+    <string name="extension_poulie_basse_h">- Extension poulie basse 4x20 (70%)</string>
+    <string name="extensie_poulie_haute_h">- Extensie poulie haute 4x20 (70%)</string>
+    <string name="curl_biceps_h">- Curl biceps 4x25 (75%)</string>
+    <string name="squat_barre_m">- Squat barre 3x15 (60%)</string>
+    <string name="presse_quadri_m">- Presse quadri 4x15 (75%)</string>
+    <string name="fentes_m">- Fentes 4x20</string>
+    <string name="leg_curl_h">- Leg curl 4x20 (75%)</string>
+    <string name="presse_quadri_h">- Presse quadri 4x20 (75%)</string>
+    <string name="squat_barre_h">- Squat barre 4x20 (80%)</string>
+    <string name="fentes_h">- Fentes 4x30 avec poids</string>
+    <string name="_10_min_de_v_lo_elliptique_h">- 10 min de vélo elliptique</string>
+    <string name="d_velopp_assis_la_machine_h">- Développé assis à la machine 4x10 (80%)</string>
+    <string name="d_velopp_inclin_h">- Développé incliné 4x10 (80%)</string>
+    <string name="d_velopp_couch_h">- Développé couché 4x10 (80%)</string>
+    <string name="pompes_h">- Pompes 5x20 (variation)</string>
+    <string name="pompes_m">- Pompes 4x15 (variation)</string>
+    <string name="d_velopp_couch_m">- Développé couché 4x12 (65%)</string>
+    <string name="d_velopp_inclin_m">- Développé incliné 4x10 (65%)</string>
+    <string name="nom_de_compte">Nom de compte
+        text=
+
+    </string>
+    <string name="age">Age
+
+    </string>
+    <string name="sex">SEX
+
+    </string>
+    <string name="poids">Poids
+
+
+    </string>
+    <string name="taille">Taille
+
+    </string>
+    <string name="niveau">Niveau
+
+    </string>
+    <string name="change_infos">Change infos</string>
+
+
+</resources>

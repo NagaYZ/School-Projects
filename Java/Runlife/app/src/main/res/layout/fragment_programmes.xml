@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProgrammesFragment">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/programmes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/image_abdos"
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/abdo"
+            android:paddingEnd="40dp"
+            android:paddingRight="40dp"
+            android:paddingStart="40dp"
+            android:src="@drawable/abdominaux_89289_w460" />
+
+        <ImageButton
+            android:id="@+id/image_jambes"
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/image_abdos"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:contentDescription="@string/jambes"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/la_musculation_des_jambes" />
+
+        <ImageButton
+            android:id="@+id/image_pecs"
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:layout_alignLeft="@id/image_abdos"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/image_abdos"
+            android:layout_marginBottom="80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/pecs"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/pecs"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/image_bras"
+            android:layout_width="163dp"
+            android:layout_height="163dp"
+            android:layout_alignLeft="@id/image_jambes"
+            android:layout_alignStart="@+id/image_jambes"
+            android:layout_alignTop="@+id/image_pecs"
+            android:contentDescription="@string/bras"
+            android:paddingBottom="40dp"
+            android:paddingRight="90dp"
+            android:paddingLeft="90dp"
+            android:paddingEnd="90dp"
+            android:src="@drawable/bras" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_abdos"
+            android:layout_alignEnd="@+id/image_abdos"
+            android:layout_alignRight="@id/image_abdos"
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_abdos"
+            android:layout_alignEnd="@+id/image_jambes"
+            android:layout_alignRight="@id/image_jambes"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_pecs"
+            android:layout_alignEnd="@+id/image_abdos"
+            android:layout_alignRight="@id/image_abdos"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_pecs"
+            android:layout_alignEnd="@+id/image_jambes"
+            android:layout_alignRight="@id/image_jambes"/>
+
+        <Button
+            android:id="@+id/validation"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="@string/validation" />
+
+
+    </RelativeLayout>
+</FrameLayout>
