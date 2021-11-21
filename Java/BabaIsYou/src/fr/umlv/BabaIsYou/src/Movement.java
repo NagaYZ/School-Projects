@@ -37,7 +37,7 @@ public class Movement {
 	 * @param dir
 	 * @return true if a move has been made.
 	 */
-	public boolean Move(Board board, Direction dir) {
+	public boolean move(Board board, Direction dir) {
 		if(dir.toVectLine() == 0 && dir.toVectColumn() == 0)
 			return false;		
 		resetMapMoveable();
@@ -45,7 +45,7 @@ public class Movement {
 		board.getMap().entrySet().forEach(entry -> entry.getValue().stream()
 				.filter(b -> board.getRules().getRule(Property.YOU, b))
 				.forEach(block -> canMove(board, block, entry.getKey(), dir))); 
-		return MoveMoveable(board, dir);
+		return moveMoveable(board, dir);
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Movement {
 	 * @param dir
 	 * @return false if mapMoveable empty
 	 */
-	private boolean MoveMoveable(Board board, Direction dir) {	
+	private boolean moveMoveable(Board board, Direction dir) {	
 		if(mapMoveable.isEmpty())
 			return false;
 		mapMoveable.entrySet().stream()

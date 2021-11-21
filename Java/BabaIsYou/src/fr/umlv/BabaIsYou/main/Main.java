@@ -41,7 +41,7 @@ public class Main{
 				var level = levelIterator.next();				
 				level.refresh();//draw first to avoid having to make a move to see the level		
 				//WIN or LOSE
-				if(level.getBoard().Win() || level.getBoard().Lose())//here in case of instant win/loss when command line are used.
+				if(level.getBoard().win() || level.getBoard().lose())//here in case of instant win/loss when command line are used.
 				{						
 					try { //pause a little to see the move before applying the action (for esthetic purpose only).
 						Thread.sleep(400);									
@@ -62,11 +62,11 @@ public class Main{
 								break;
 							}		
 							//MOVEMENT
-							if(level.getBoard().Move(key)) {//if a move has been made refresh/redraw, execute action...
+							if(level.getBoard().move(key)) {//if a move has been made refresh/redraw, execute action...
 								//REFRESH / REDRAW	
 								level.refresh();					
 								//WIN or LOSE
-								if(level.getBoard().Win() || level.getBoard().Lose())
+								if(level.getBoard().win() || level.getBoard().lose())
 								{						
 									try { //pause a little to see the move before applying the action (for esthetic purpose only).
 										Thread.sleep(400);									

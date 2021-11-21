@@ -68,11 +68,8 @@ public class Board{
 	 * @return true if the Coordinates is outside boards range
 	 */
 	public boolean outOfBounds(Coordinates coord) {		
-		if(coord.getLine() < 0 || coord.getCol() < 0 || coord.getLine() >= height || coord.getCol() >= width)
-			return true;
-		return false;
+		return (coord.getLine() < 0 || coord.getCol() < 0 || coord.getLine() >= height || coord.getCol() >= width);
 	}
-
 	
 	/**
 	 * @return boards width
@@ -108,12 +105,12 @@ public class Board{
 	 * @param key
 	 * @return true if a move has been made
 	 */
-	public boolean Move(KeyboardKey key) {
+	public boolean move(KeyboardKey key) {
 		Direction dir = Direction.toDir(key);
 		if(dir == null)
 			return false;
 		
-		if(movements.Move(this, dir)) { // if move has been made, execute actions and update rules
+		if(movements.move(this, dir)) { // if move has been made, execute actions and update rules
 			actions.executeAction(this);
 			rules.updateRules(this);
 			return true;
@@ -125,8 +122,8 @@ public class Board{
 	 * check if win.
 	 * @return true if win.
 	 */
-	public boolean Win() {
-		return actions.Win(this);
+	public boolean win() {
+		return actions.win(this);
 		
 	}
 	
@@ -134,8 +131,8 @@ public class Board{
 	 * check if lose.
 	 * @return true if lose.
 	 */
-	public boolean Lose() {
-		return actions.Death(this);
+	public boolean lose() {
+		return actions.death(this);
 	}
 	
 }

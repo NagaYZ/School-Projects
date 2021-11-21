@@ -11,7 +11,6 @@ public enum Name implements BlockInter {
 
 	@Override
 	public BlockType getType() {
-		// TODO Auto-generated method stub
 		return BlockType.NAME;
 	}	
 

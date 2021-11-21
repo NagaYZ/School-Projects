@@ -3,8 +3,8 @@ A clone of the game "Baba is You" in Java (in the context of a Uni project)
 by Yassine (NagaYZ) ZAIANI & Abderahman BEKHTI
 ## Requirement
 Make sure that you have:
-- Java JRE 15 installed
-- Apache Ant installed [Installation](https://ant.apache.org/manual/index.html)
+-   Java JRE 15 installed
+-   Apache Ant installed [Installation](https://ant.apache.org/manual/index.html)
 
 ## Compile
 ```Shell
@@ -15,11 +15,11 @@ Run the game with
 ```Shell
 java --enable-preview -jar baba.jar [options]
 ```
-Options can be the following:
--   nothing will default to launch default-level.txt
--   `--level [name]` with name being the name of a level (ex: level1.txt)
--   `--levels [dirname]` with dirname being the name of a directory containing level files (here levels)
--   `--execute [word1] IS [word2]` allows you to enable a sentence like ROCK IS FLAG (use it to cheat) there
+Options can be the following:\
+-   nothing will default to launch default-level.txt\
+-   `--level [name]` with name being the name of a level (ex: level1.txt)\
+-   `--levels [dirname]` with dirname being the name of a directory containing level files (here levels)\
+-   `--execute [word1] IS [word2]` allows you to enable a sentence like ROCK IS FLAG (use it to cheat) there\
 can be multiple --execute for the same command line.
 `--level` and `--levels` are incompatible, but you can cumulate each.
 

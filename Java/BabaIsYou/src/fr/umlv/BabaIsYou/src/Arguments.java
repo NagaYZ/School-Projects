@@ -44,7 +44,9 @@ public class Arguments {
 					argMap.clear();
 				}catch(IllegalArgumentException e) {
 					System.err.println("Invalid --execute argument : " + args[i] + " " + args[i + 1] + " " + args[i + 2]); 
-				}catch(ArrayIndexOutOfBoundsException e) { }//read rest of arguments if the syntax of current argument is not valid.
+				}catch(ArrayIndexOutOfBoundsException e) {
+					//read rest of arguments if the syntax of current argument is not valid.
+				}
 			}
 		}	
 	}
@@ -141,16 +143,16 @@ public class Arguments {
 	 */
 	public static void parseArgs(String[] args, Set<Map<Name, Property>> argSet, ArrayList<Level> listLevel, ApplicationContext context) throws IOException {	
 		parseArgsExecute(argSet, args);
-		if(!parseArgsLevels(listLevel, args, context, argSet)) {  // no need to check --level if --levels is valid all level are already in the List.			
-			if(!parseArgsLevel(listLevel, args, context, argSet)) { // if --levels and --level failed then add default level		
-				try {
-					Path defaultLevelDest = Paths.get(System.getProperty("user.dir") + "/src/fr/umlv/BabaIsYou/levels/default-level.txt");
-					if(!readFile(defaultLevelDest, listLevel, context, argSet))
-						System.err.println("Error while reading file maybe corrupted: default-level.txt" );	
-				} catch (InvalidPathException | NullPointerException  e) { 
-					System.err.println("Invalid default level path");
-				}	
-			}
+		if(!parseArgsLevels(listLevel, args, context, argSet) && !parseArgsLevel(listLevel, args, context, argSet)) {  
+			// no need to check --level if --levels is valid all level are already in the List.			
+			// if --levels and --level failed then add default level		
+			try {
+				Path defaultLevelDest = Paths.get(System.getProperty("user.dir") + "/src/fr/umlv/BabaIsYou/levels/default-level.txt");
+				if(!readFile(defaultLevelDest, listLevel, context, argSet))
+					System.err.println("Error while reading file maybe corrupted: default-level.txt" );	
+			} catch (InvalidPathException | NullPointerException  e) { 
+				System.err.println("Invalid default level path");
+			}				
 		}			
 		//DISPLAY ENABLED COMMAND.
 		System.out.print("Command enabled:");

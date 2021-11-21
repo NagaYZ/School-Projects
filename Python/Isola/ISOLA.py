@@ -180,7 +180,7 @@ def mort_pion1(plateau,a,b):
                 return True
                 
 def is_on_borders(a,b,x,y):
-    return (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x ==-1) or (b == n-1 and y ==-1)  :#cas particulier bord
+    return ((a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x ==-1) or (b == n-1 and y ==-1))#cas particulier bord
     
 def is_in_corners(a,b,x,y):
     return ((a == 0 and b == 0) or (a == n-1 and b == n-1)  or (a == 0 and b == n-1) or (a == n-1 and b == 0)) or (a == 0 or a == n-1 or b == 0 or b == n-1)
