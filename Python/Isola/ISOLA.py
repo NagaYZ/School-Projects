@@ -139,7 +139,12 @@ def casesdispo(plateau,a,b,u,d,i,j,jouer):
                     rectangle(k,o,k+taille_case,o+taille_case,couleur='black',remplissage='green')
     
 def condition_mort(plateau,a,b,u,d):
-    compteur1,compteur2 = 0,0
+    return mort_pion1(plateau,a,b,u,d) or mort_pion2(plateau,a,b,u,d)
+
+    
+        
+def mort_pion1(plateau,a,b,u,d):
+    compteur1 = 0
     for x in range(-1,2):           #pion1
         for y in range(-1,2):
             if (a == 0 and x == 1) or (b == 0 and y == 1) or (a == n-1 and x ==-1) or (b == n-1 and y ==-1)  :#cas particulier pion 1 
@@ -153,7 +158,9 @@ def condition_mort(plateau,a,b,u,d):
                 if ordi ==1:
                     texte(65,640,"L'ordinateur à gagné",couleur='black',taille='18',police='Calibri italic')
                     return True
-                    
+    
+def mort_pion2(plateau,a,b,u,d):
+    compteur2=0
     for x in range(-1,2):           #pion2
         for y in range(-1,2):
             if (u == 0 and x == 1) or (d == 0 and y == 1) or (u == n-1 and x ==-1) or (d == n-1 and y ==-1) :#cas particulier pion 2 
@@ -163,7 +170,7 @@ def condition_mort(plateau,a,b,u,d):
             if (((u == 0 and d == 0) or (u == n-1 and d == n-1)  or (u == 0 and d == n-1) or (u == n-1 and d == 0)) and compteur2 == 4) or ((u == 0 or u == n-1 or d == 0 or d == n-1) and compteur2 == 6) or (compteur2 == 9) :#cas particulier pion 2 
                 texte(65,640,"Joueur 1 vous avez gagné",couleur='black',taille='18',police='Calibri italic')
                 return True
-           
+                
 def placer_ordi_pion(plateau) :
     x = randint(0,n-1)
     y = randint(0,n-1)
@@ -201,7 +208,7 @@ taille_case = 600/n # taille d'une case du plateau
 jouer,regle,interdit,custom,theme,back,ordi,choix = 0,0,0,0,0,0,0,0 # Initialisation des variables
 l,l2,l_int_1,l_int_2=[],[],[],[] #Initialisation des listes de sauvegardes des coups
 colonne_interdit2=0
-colonne_interdit=0
+colonne_interdit1=0
 if __name__ == '__main__':
     cree_fenetre(600,700)
     while True: 
