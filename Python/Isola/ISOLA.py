@@ -8,16 +8,48 @@ def initplateau(n): #Créer le plateau en n*n , 'n' choisis par l'utilisateur
     for i in range(n):
         res.append([0]*n)
     return res
-
+    
+def draw_theme(n,taille_case,theme):
+    if theme == 'noel':
+        image(taille_case*n/2, taille_case*n/2,'img/theme_noel_jeu.png')
+    if theme == 'foret':
+        image(taille_case*n/2, taille_case*n/2,'img/theme_foret_jeu.png')
+    if theme == 'eau':
+        image(taille_case*n/2, taille_case*n/2,'img/theme_eau_jeu.png')
+                    
+def theme_pion1(x,y,taille_case,theme):
+    if theme == 'noel':
+        image(x+ taille_case/2, y+taille_case/2,'img/santa.png',tag='pion1')
+    if theme == 'foret':
+        image(x+ taille_case/2, y+taille_case/2,'img/feuille.png',tag='pion1')
+    if theme == 'eau':
+        image(x+ taille_case/2, y+taille_case/2,'img/poisson.png',tag='pion1')
+    elif theme==0:
+        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='black',remplissage='black',tag='pion1')   
+        
+def theme_pion2(x,y,taille_case,theme):
+    if theme == 'noel':
+        image(x+ taille_case/2, y+taille_case/2,'img/renne.png',tag='pion2')
+    if theme == 'foret':
+        image(x+ taille_case/2, y+taille_case/2,'img/bois.png',tag='pion2')
+    if theme == 'eau':
+        image(x+ taille_case/2, y+taille_case/2,'img/poulpe.png',tag='pion2')
+    elif theme==0:
+        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='blue',remplissage='blue',tag='pion2')
+    
+def theme_interdit(x,y,taille_case,theme):
+    if theme == 'noel':
+        image(x+ taille_case/2, y+taille_case/2,'img/boule.png',tag='interdit')
+    if theme == 'foret':
+        image(x+ taille_case/2, y+taille_case/2,'img/feu.png',tag='interdit')
+    if theme == 'eau':
+        image(x+ taille_case/2, y+taille_case/2,'img/requin.png',tag='interdit')
+    elif theme==0:
+        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),remplissage='red',tag='interdit') 
+            
 def dessine_plateau(plateau,a,b,u,d,theme):
     n = len(plateau)
-    if theme == 'noel':
-            image(taille_case*n/2, taille_case*n/2,'img/theme_noel_jeu.png')
-    if theme == 'foret':
-            image(taille_case*n/2, taille_case*n/2,'img/theme_foret_jeu.png')
-    if theme == 'eau':
-            image(taille_case*n/2, taille_case*n/2,'img/theme_eau_jeu.png')
-     
+    draw_theme(n,taille_case,theme)
     for i in range(n):
         for j in range(n):
             x, y = j * taille_case, i * taille_case
@@ -28,43 +60,23 @@ def dessine_plateau(plateau,a,b,u,d,theme):
                 
             if plateau[i][j] == 1 : #pion 1
                 if n <=6:
-                    if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'img/santa.png',tag='pion1')
-                    if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'img/feuille.png',tag='pion1')
-                    if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'img/poisson.png',tag='pion1')
-                    elif theme ==0:
-                        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='black',remplissage='black',tag='pion1')
+                    theme_pion1(x,y,taille_case,theme)
                 if n>6:
                    cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='black',remplissage='black',tag='pion1')  
                    
             if plateau[i][j] == 2 :#pion 2
                 if n <=6:
-                    if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'img/renne.png',tag='pion2')
-                    if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'img/bois.png',tag='pion2')
-                    if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'img/poulpe.png',tag='pion2')
-                    elif theme==0:
-                        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='blue',remplissage='blue',tag='pion2')
+                    theme_pion2(x,y,taille_case,theme)
                 if n>6:
                    cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),couleur='blue',remplissage='blue',tag='pion2')
                            
             if plateau[i][j]==3 : #interdit (case bloqué)
                 if n <=6:
-                    if theme == 'noel':
-                        image(x+ taille_case/2, y+taille_case/2,'img/boule.png',tag='interdit')
-                    if theme == 'foret':
-                        image(x+ taille_case/2, y+taille_case/2,'img/feu.png',tag='interdit')
-                    if theme == 'eau':
-                        image(x+ taille_case/2, y+taille_case/2,'img/requin.png',tag='interdit')
-                    elif theme ==0:
-                        cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),remplissage='red',tag='interdit') 
+                    theme_interdit(x,y,taille_case,theme)
                 if n>6:
-                   cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),remplissage='red',tag='interdit')   
-            
+                   cercle(x+ taille_case/2, y+taille_case/2,(taille_case*(3.5/10)),remplissage='red',tag='interdit')  
+
+                   
 def pixel_vers_case(x,y, taille_case) :
     return int(y // taille_case), int(x // taille_case)
     
@@ -92,34 +104,41 @@ def annuler_coup(l,l2,l_int_1,l_int_2,plateau,a,b,u,d,i,j,back,interdit,jouer):
                 l_int_2.append((i,j))#interdit pion2
                 
     if back ==1:
-        if len(l_int_1) == len(l_int_2) and len(l) > len(l2):#retour en arriere pion1
-            x,y=l[len(l)-1]
-            plateau[x][y]=0
-            l.pop()
-            x,y=l[len(l)-1]
-            plateau[x][y]=1
-            return x,y
+        return retour_pion1(l,l2,l_int_1,l_int_2,plateau) or retour_pion2(l,l2,l_int_1,l_int_2,plateau)
             
-        if len(l_int_1) > len(l_int_2) and len(l) == len(l2):#retour en arriere pion2
-            x,y=l2[len(l2)-1]
-            plateau[x][y]=0
-            l2.pop()
-            x,y=l2[len(l2)-1]
-            plateau[x][y]=2
-            return x,y
             
-        if len(l_int_1) !=0 and len(l_int_1) > len(l_int_2) and len(l) > len(l2):#retour en arriere interdit pion1
-            x,y=l_int_1[len(l_int_1)-1]
-            plateau[x][y]=0
-            l_int_1.pop()
-            return x,y
+       
             
-        if len(l_int_2) !=0 and len(l_int_1) == len(l_int_2) and len(l) == len(l2):#retour en arriere interdit pion2
-            x,y=l_int_2[len(l_int_2)-1]
-            plateau[x][y]=0
-            l_int_2.pop()
-            return x,y
-          
+def retour_pion1(l,l2,l_int_1,l_int_2,plateau):
+    if len(l_int_1) == len(l_int_2) and len(l) > len(l2):#retour en arriere pion1
+        x,y=l[len(l)-1]
+        plateau[x][y]=0
+        l.pop()
+        x,y=l[len(l)-1]
+        plateau[x][y]=1
+        return x,y
+        
+    if len(l_int_1) > len(l_int_2) and len(l) == len(l2):#retour en arriere pion2
+        x,y=l2[len(l2)-1]
+        plateau[x][y]=0
+        l2.pop()
+        x,y=l2[len(l2)-1]
+        plateau[x][y]=2
+        return x,y
+ 
+def retour_pion2(l,l2,l_int_1,l_int_2,plateau):
+    if len(l_int_1) !=0 and len(l_int_1) > len(l_int_2) and len(l) > len(l2):#retour en arriere interdit pion1
+        x,y=l_int_1[len(l_int_1)-1]
+        plateau[x][y]=0
+        l_int_1.pop()
+        return x,y
+        
+    if len(l_int_2) !=0 and len(l_int_1) == len(l_int_2) and len(l) == len(l2):#retour en arriere interdit pion2
+        x,y=l_int_2[len(l_int_2)-1]
+        plateau[x][y]=0
+        l_int_2.pop()
+        return x,y
+                   
 def casesdispo(plateau,a,b,u,d,i,j,jouer):
     if jouer == 6 :
         casesdispo_pion1(plateau,a,b,u,d,i,j)

@@ -489,9 +489,9 @@ def donne_ev():
             "La fenêtre n'a pas été créée avec la fonction \"cree_fenetre\".")
     if len(__canevas.ev_queue) == 0:
         return None
-   return __canevas.ev_queue.popleft()
-
-
+        
+    return __canevas.ev_queue.popleft()
+   
 def attend_ev():
     """Attend qu'un événement ait lieu et renvoie le premier événement qui
     se produit."""
