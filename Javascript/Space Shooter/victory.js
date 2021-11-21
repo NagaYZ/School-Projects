@@ -15,5 +15,4 @@ function victoire(){
 
 function message_victoire(){	
 	location.reload();
-	console.log('GG!');
 }

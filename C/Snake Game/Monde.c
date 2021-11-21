@@ -94,6 +94,7 @@ Monde init_monde(int nb_pommes)
 	Monde mon;
 	mon.nb_ligne = N;
 	mon.nb_colonne = M;
+	mon.serpent = NULL;
 	assert(0<=nb_pommes && nb_pommes<=3);
 
 	for(i = 0; i < 3; i++)

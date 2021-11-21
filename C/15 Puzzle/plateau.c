@@ -70,7 +70,7 @@ int* randomCarrePossible(Plateau P,int column,int row){
 	int x3=-1,y3=-1;
 	int x4=-1,y4=-1;
 	int i,j,k=1;
-	int random = 0 ;
+	int random;
 	static int coord[2];/*to store x and y coordinates of a valid square*/
 
 	/*get adjacent square to the black square (right,left,up,down)*/

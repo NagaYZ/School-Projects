@@ -58,7 +58,7 @@ function direction_alien(){
 	var alien8 = world["ALIEN8"];
 	
 	//premiere descente
-	if (first_descente==0){
+	if (first_descente===0){
 		right_side(alien1);
 		right_side(alien2);
 		right_side(alien3);
@@ -70,7 +70,7 @@ function direction_alien(){
 		left_side(alien8);	
 	}
 	
-	if ((alien1.x>=561)&& first_descente==0){
+	if ((alien1.x>=561)&& first_descente===0){
 		down(alien1);
 		down(alien2);
 		down(alien3);
@@ -81,7 +81,7 @@ function direction_alien(){
 		down(alien8);	
 		first_descente=1;
 	}
-	if (first_descente ==1){
+	if (first_descente ===1){
 		left_side(alien1);
 		left_side(alien2);
 		left_side(alien3);
@@ -94,7 +94,7 @@ function direction_alien(){
 
 	}
 	
-	if ((alien1.x<=0)&& first_descente==1 ){
+	if ((alien1.x<=0)&& first_descente===1 ){
 		down(alien1);
 		down(alien2);
 		down(alien3);
@@ -122,31 +122,31 @@ function direction_alien(){
 		monte_8_4=2;		
 	}
 	
-	if (monte_8_4==1){
+	if (monte_8_4===1){
 		
 		left_side_rebond_8_4(alien4);
 		right_side_rebond_8_4(alien8);					
 	}
 	
-	if ((alien8.x >=560) && monte_8_4==1){	
+	if ((alien8.x >=560) && monte_8_4===1){	
 		up(alien4);
 		up(alien8);
 		monte_8_4=2;	
 	}
 
-	if (monte_8_4==2){		
+	if (monte_8_4===2){		
 
 		right_side_rebond_8_4(alien4);
 		left_side_rebond_8_4(alien8);
 	}
 
-	if ((alien8.x <=0) && monte_8_4==2){
+	if ((alien8.x <=0) && monte_8_4===2){
 		up(alien4);
 		up(alien8);
 		monte_8_4=1;
 	}
 
-	if (autre_descente==0 && monte_8_4>=1){	
+	if (autre_descente===0 && monte_8_4>=1){	
 		left_side(alien1);
 		left_side(alien2);
 		left_side(alien3);
@@ -156,7 +156,7 @@ function direction_alien(){
 		right_side(alien7);
 	}
 
-	if (((alien1.x<=0 ) && autre_descente==0 )&& monte_8_4 >=1){
+	if (((alien1.x<=0 ) && autre_descente===0 )&& monte_8_4 >=1){
 		down(alien1);
 		down(alien2);
 		down(alien3);		
@@ -166,7 +166,7 @@ function direction_alien(){
 		autre_descente=1;		
 	}
 
-	if (autre_descente==1){
+	if (autre_descente===1){
 		right_side(alien1);
 		right_side(alien2);
 		right_side(alien3);
@@ -175,7 +175,7 @@ function direction_alien(){
 		left_side(alien6);
 		left_side(alien7);			
 	}
-	if ((alien1.x>=561) && autre_descente==1){
+	if ((alien1.x>=561) && autre_descente===1){
 		down(alien1);
 		down(alien2);
 		down(alien3);		
@@ -201,29 +201,29 @@ function direction_alien(){
 		}
 		
 	}
-	if (monte_7_3==1){				
+	if (monte_7_3===1){				
 		right_side_rebond_7_3(alien3);
 		left_side_rebond_7_3(alien7);						
 	}
 	
 	
-	if ((alien3.x >=560 ) && monte_7_3==1){
+	if ((alien3.x >=560 ) && monte_7_3===1){
 		up(alien3);
 		up(alien7);	
 		monte_7_3=2;
 		
 	}
-	if (monte_7_3==2){		
+	if (monte_7_3===2){		
 		left_side_rebond_7_3(alien3);	
 		right_side_rebond_7_3(alien7);
 	}
-	if ((alien7.x >=560 ) && monte_7_3==2){
+	if ((alien7.x >=560 ) && monte_7_3===2){
 		up(alien3);
 		up(alien7);
 		monte_7_3=1;
 	}
 
-	if (autre_descente==2){	
+	if (autre_descente===2){	
 		right_side(alien1);
 		right_side(alien2);
 
@@ -231,7 +231,7 @@ function direction_alien(){
 		left_side(alien6);
 	}
 
-	if ((alien1.x>=561 ) && autre_descente==2 ){
+	if ((alien1.x>=561 ) && autre_descente===2 ){
 		down(alien1);
 		down(alien2);		
 		down(alien5);
@@ -239,7 +239,7 @@ function direction_alien(){
 		autre_descente=3;		
 	}
 
-	if (autre_descente==3){		
+	if (autre_descente===3){		
 		left_side(alien1);
 		left_side(alien2);
 
@@ -248,7 +248,7 @@ function direction_alien(){
 
 	}
 
-	if ((alien1.x<=0) && autre_descente==3){
+	if ((alien1.x<=0) && autre_descente===3){
 		down(alien1);
 		down(alien2);		
 		down(alien5);
@@ -273,43 +273,43 @@ function direction_alien(){
 		}		
 	}	
 	
-	if  (monte_6_2==1){			
+	if  (monte_6_2===1){			
 		right_side_rebond_6_2(alien2);
 		left_side_rebond_6_2(alien6);			
 	}
 		
-	if ((alien6.x <=0)&& monte_6_2==1){
+	if ((alien6.x <=0)&& monte_6_2===1){
 		up(alien2);
 		up(alien6);	
 		monte_6_2=2;
 		
 	}
-	if  (monte_6_2==2){		
+	if  (monte_6_2===2){		
 		left_side_rebond_6_2(alien2);
 		right_side_rebond_6_2(alien6);
 	}
-	if ( (alien6.x >=560)&& monte_6_2==2){		
+	if ( (alien6.x >=560)&& monte_6_2===2){		
 		up(alien2);
 		up(alien6);	
 	 	monte_6_2=1;
 	}
 
-	if (autre_descente==4){		
+	if (autre_descente===4){		
 		left_side(alien1);
 		right_side(alien5);			
 	}
 
-	if ((alien1.x<=0 ) && autre_descente==4 ){		
+	if ((alien1.x<=0 ) && autre_descente===4 ){		
 		down(alien1);
 		down(alien5);		
 		autre_descente=5;		
 	}
 
-	if (autre_descente==5){	
+	if (autre_descente===5){	
 		right_side(alien1);	
 		left_side(alien5);			
 	}
-	if ((alien1.x>=560) && autre_descente==5){
+	if ((alien1.x>=560) && autre_descente===5){
 		down(alien1);
 		down(alien5);	
 		autre_descente=4;		
@@ -326,22 +326,22 @@ function direction_alien(){
 		autre_descente='none';	
 	}	
 
-	if  (monte_5_1==1){
+	if  (monte_5_1===1){
 		left_side_rebond_5_1(alien1);	
 		right_side_rebond_5_1(alien5);	
 	}
 		
-	if ((alien5.x >=555 ) && monte_5_1==1){
+	if ((alien5.x >=555 ) && monte_5_1===1){
 		up(alien1);
 		up(alien5);	
 		monte_5_1=2;
 		
 	}
-	if  (monte_5_1==2){
+	if  (monte_5_1===2){
 		right_side_rebond_5_1(alien1);	
 		left_side_rebond_5_1(alien5);
 	}
-	if ((alien5.x <=0) && monte_5_1==2){
+	if ((alien5.x <=0) && monte_5_1===2){
 		up(alien1);
 		up(alien5);
 	 	monte_5_1=1;
@@ -353,29 +353,29 @@ function direction_alien(){
 		monte_8_4=undefined;	
 	}  	
 
-	if ((redescente_8_4==0)&& monte_8_4==undefined){
+	if ((redescente_8_4===0)&& monte_8_4===undefined){
 		left_side_rebond_8_4(alien4);		
 		right_side_rebond_8_4(alien8);						
 	}
 
-	if (((alien8.x >=560) && monte_8_4==undefined)&& redescente_8_4==0){
+	if (((alien8.x >=560) && monte_8_4===undefined)&& redescente_8_4===0){
 		down(alien4);
 		down(alien8);		
 		redescente_8_4=1;		
 	}
 
-	if (redescente_8_4==1){		
+	if (redescente_8_4===1){		
 		
 		right_side_rebond_8_4(alien4);		
 		left_side_rebond_8_4(alien8);			
 	}
 
-	if (((alien8.x <=0 )&& monte_8_4==undefined)&& redescente_8_4==1){		
+	if (((alien8.x <=0 )&& monte_8_4===undefined)&& redescente_8_4===1){		
 		down(alien4);
 		down(alien8);
 		redescente_8_4=0;		
 	}
-	if ((alien8.y >=561)&& monte_8_4 ==undefined){
+	if ((alien8.y >=561)&& monte_8_4 ===undefined){
 		
 		redescente_8_4=0;		
 		autre_descente='none';	
@@ -386,28 +386,28 @@ function direction_alien(){
 		rebond["rebond2"]+=10/100; //ajout de 10% de vitesse
 		monte_7_3=undefined;	
 	}  	
-	if ((redescente_7_3==0)&& monte_7_3==undefined){	
+	if ((redescente_7_3===0)&& monte_7_3===undefined){	
 		left_side_rebond_7_3(alien3);		
 		right_side_rebond_7_3(alien7);						
 	}
 
-	if (((alien7.x >=560) && monte_7_3==undefined)&& redescente_7_3==0){
+	if (((alien7.x >=560) && monte_7_3===undefined)&& redescente_7_3===0){
 		down(alien3);
 		down(alien7);
 		redescente_7_3=1;		
 	}
 
-	if (redescente_7_3==1){			
+	if (redescente_7_3===1){			
 		right_side_rebond_7_3(alien3);		
 		left_side_rebond_7_3(alien7);			
 	}
 
-	if (((alien7.x <=0 )&& monte_7_3==undefined)&& redescente_7_3==1){		
+	if (((alien7.x <=0 )&& monte_7_3===undefined)&& redescente_7_3===1){		
 		down(alien3);
 		down(alien7);	
 		redescente_7_3=0;		
 	}
-	if ((alien7.y >=561)&& monte_7_3 == undefined){
+	if ((alien7.y >=561)&& monte_7_3 === undefined){
 		redescente_7_3=0;
 	}
 
@@ -416,28 +416,28 @@ function direction_alien(){
 		rebond["rebond3"]+=10/100;	 //ajout de 10% de vitesse
 		monte_6_2=undefined;	
 	}  	
-	if ((redescente_6_2==0)&& monte_6_2==undefined){					
+	if ((redescente_6_2===0)&& monte_6_2===undefined){					
 		left_side_rebond_6_2(alien2);		
 		right_side_rebond_6_2(alien6);				
 	}
 	
-	if (((alien6.x >=560) && monte_6_2==undefined)&& redescente_6_2==0){
+	if (((alien6.x >=560) && monte_6_2===undefined)&& redescente_6_2===0){
 		down(alien2);
 		down(alien6);	
 		redescente_6_2=1;		
 	}
 
-	if (redescente_6_2==1){	
+	if (redescente_6_2===1){	
 		right_side_rebond_6_2(alien2);		
 		left_side_rebond_6_2(alien6);			
 	}
 
-	if (((alien6.x <=0 )&& monte_6_2==undefined)&& redescente_6_2==1){		
+	if (((alien6.x <=0 )&& monte_6_2===undefined)&& redescente_6_2===1){		
 		down(alien2);
 		down(alien6);	
 		redescente_6_2=0;		
 	}
-	if ((alien6.y >=561)&& monte_6_2==undefined){
+	if ((alien6.y >=561)&& monte_6_2===undefined){
 		redescente_6_2=0;
 	}
 	
@@ -446,30 +446,30 @@ function direction_alien(){
 		rebond["rebond4"]+=10/100; //ajout de 10% de vitesse
 		monte_5_1=undefined;
 	}  	
-	if ((redescente_5_1==0)&& monte_5_1==undefined){	
+	if ((redescente_5_1===0)&& monte_5_1===undefined){	
 		right_side_rebond_5_1(alien1);		
 		left_side_rebond_5_1(alien5);		
 							
 	}
 
-	if (((alien5.x <=0 ) && monte_5_1==undefined)&& redescente_5_1==0){
+	if (((alien5.x <=0 ) && monte_5_1===undefined)&& redescente_5_1===0){
 
 		down(alien1);
 		down(alien5);	
 		redescente_5_1=1;		
 	}
 
-	if (redescente_5_1==1){			
+	if (redescente_5_1===1){			
 		left_side_rebond_5_1(alien1);		
 		right_side_rebond_5_1(alien5);		
 	}
 
-	if (((alien5.x >=560)&& monte_5_1==undefined)&& redescente_5_1==1){		
+	if (((alien5.x >=560)&& monte_5_1===undefined)&& redescente_5_1===1){		
 		down(alien1);
 		down(alien5);		
 		redescente_5_1=0;		
 	}
-	if ((alien5.y >=561)&& monte_5_1==undefined){
+	if ((alien5.y >=561)&& monte_5_1===undefined){
 		redescente_5_1=0;
 	}
 

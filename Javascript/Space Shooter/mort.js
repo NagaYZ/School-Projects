@@ -118,7 +118,4 @@ function mort_vaisseau(){// mort du vaisseau par colision avec missile ou alien.
 
 function game_over(){
 	location.reload(); // on actualise la page.
-	console.log('Perdu !');
-	
-
 }

@@ -102,9 +102,9 @@ void Initialiser_lettre_proba(Grille grille)
     compteur++;
     grille->proba_lettre[compteur] = 'X';
     compteur++;
-    grille->proba_lettre[compteur] = 'Z';
-    compteur++;
+    grille->proba_lettre[compteur] = 'Z';    
 }
+
 void Initialiser_grille(Grille grille)
 {
     assert(grille);

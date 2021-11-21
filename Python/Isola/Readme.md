@@ -20,7 +20,7 @@ Des indications sont affichées dans un rectangle en bas du plateau (à qui le t
 Il y a une flèche dans ce même rectangle qui permet de revenir en arrière (comme un Ctrl + Z)<br/>
 Lorsque l’un des deux joueurs à perdu, un rectangle « Recommencer » s’affiche en plein milieu de l’écran », si oui l’utilisateur est alors ramené au choix des positions de départ des pions.<br/>
 
-## Comment jouer ?
+## Comment jouer
 À tour de rôle les joueurs choisissent une case vers la laquelle se déplacer (avec le clic gauche), et une case à bloquer (avec le clic droit).<br/>
 Le jeu s'arrête lorsqu'un des 2 joueurs ne peut plus se déplacer.
 

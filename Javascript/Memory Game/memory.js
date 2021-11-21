@@ -23,7 +23,7 @@ function comparer(array2,id){
 		tab=[];
 	}	
 	
-	if (complet.length== 8){//partie fini
+	if (complet.length=== 8){//partie fini
 		setTimeout(function() {
 				alert("Gagné");
 				location.reload();

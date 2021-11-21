@@ -11,7 +11,7 @@ You can simply launch the script in the sources folder with the following comman
 The script cleans the executable files and compile the parser "as" (with make) and create a "test_log.txt" file in the sources folder containing the
 tests results. (0 if the test is correct, 1 otherwise).
 
-# Manually compile
+## Manually compile
 You can also compile the parser with make and run a specific test using:
 ```Shell
 make

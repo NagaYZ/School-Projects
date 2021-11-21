@@ -7,11 +7,9 @@ make
 ```
 ## Execution
 ```Shell
-./labyrinthe
+./labyrinthe [--option]
 ```
 ## How to Use
-The user enters the command:
-./labyrinthe [--option]
 Where the options are:
 ▪ --unique (unique solution)
 ▪ --acces (makes all cells accessible, making the maze harder to solve)

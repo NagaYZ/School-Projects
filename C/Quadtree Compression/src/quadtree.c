@@ -38,10 +38,10 @@ ColorQuadtree allocate_color_quad(int x ,int y, int zone,unsigned char r,unsigne
 	assert(x >= 0 && x < 512);
 	assert(y >= 0 && y < 512);
 	assert(zone >= 1 && zone <= 512);
-	assert(r >= 0 && r <= 255);
-	assert(g >= 0 && g <= 255);
-	assert(b >= 0 && b <= 255);
-	assert(alpha >=0 && alpha <= 255);
+	assert(r <= 255);
+	assert(g <= 255);
+	assert(b <= 255);
+	assert(alpha <= 255);
 
 	ColorQuadtree quad = (ColorQuadtree) malloc(sizeof(struct color_quadtree));
 
