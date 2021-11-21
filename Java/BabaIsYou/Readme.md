@@ -16,11 +16,10 @@ Run the game with
 java --enable-preview -jar baba.jar [options]
 ```
 Options can be the following:
--   nothing will default to launch default-level.txt<br/>
--   `--level [name]` with name being the name of a level (ex: level1.txt)<br/>
--   `--levels [dirname]` with dirname being the name of a directory containing level files (here levels)<br/>
--   `--execute [word1] IS [word2]` allows you to enable a sentence like ROCK IS FLAG (use it to cheat) there<br/>
-can be multiple --execute for the same command line.
+-   `--level [name]` with name being the name of a level (ex: level1.txt) (nothing will default to launch default-level.txt)
+-   `--levels [dirname]` with dirname being the name of a directory containing level files (here levels) (nothing will default to launch default-level.txt)
+-   `--execute [word1] IS [word2]` allows you to enable a sentence like ROCK IS FLAG (use it to cheat) there (nothing will default to launch default-level.txt)can be multiple --execute for the same command line.
+
 `--level` and `--levels` are incompatible, but you can cumulate each.
 
 It is possible to skip a level by pressing the "q" key.
