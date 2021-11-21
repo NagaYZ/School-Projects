@@ -1,3 +1,6 @@
 # School Projects
 Repository for my school projects
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a347cb7081b743c7810505bfdf38dd00)](https://app.codacy.com/gh/NagaYZ/Java-is-You?utm_source=github.com&utm_medium=referral&utm_content=NagaYZ/Java-is-You&utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/NagaYZ/java-is-you/badge/main)](https://www.codefactor.io/repository/github/NagaYZ/java-is-you/overview/main)
+
