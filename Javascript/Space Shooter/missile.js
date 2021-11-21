@@ -24,7 +24,7 @@ function tirer(){
 			clearInterval(loop);
 		}			
 	}
-};
+}
 
 function draw_missile() {	
 	var canvas = document.getElementById('game_area').getContext('2d');

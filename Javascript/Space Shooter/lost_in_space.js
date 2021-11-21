@@ -23,7 +23,7 @@ function jouer() {
 	missile.display='ready';
 	for (var i=1;i<9;i++){world["ALIEN"+i+""].display="alive";} //tous les aliens sont "en vie".(voir mort.js)
 	window.setInterval(gameLoop, 500/60);
-};
+}
 
 	
 function gameLoop() {
