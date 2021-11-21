@@ -1,5 +1,5 @@
 # Baba is You Clone
-A clone of the game "Baba is You" in Java (in the context of a Uni project)
+A clone of the game "Baba is You" in Java (in the context of a Uni project)\
 by Yassine (NagaYZ) ZAIANI & Abderahman BEKHTI
 ## Requirement
 Make sure that you have:
