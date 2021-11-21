@@ -9,7 +9,7 @@ def lire_grille(nom):
         try:
             fichier = open(nom , 'r')
             break
-        except:
+        except Exception as e:
             return 'Nom'
             
     grille=[]
@@ -19,7 +19,7 @@ def lire_grille(nom):
         for element in ligne.split():
             try:
                 int(element)
-            except:
+            except Exception as e::
                 return 'Lettre'
             liste_element.append(element)
         grille.append(liste_element)
@@ -27,8 +27,6 @@ def lire_grille(nom):
         return 'Rect'  
     afficher_grille(grille)
     return grille
-    
-    fichier.close()
     
 def afficher_grille(grille):
     """Affiche la grille"""
@@ -96,8 +94,7 @@ def sans_conflit(grille, noircies): #regle 1
                 if grille[i][n]==grille[i][x] and (((i,n) not in noircies) and ((i,x) not in noircies)):#ligne
                     return False
                     
-                elif grille[n][i]==grille[x][i] and (((n,i) not in noircies) and ((x,i) not in noircies)):#colonne
-                    
+                if grille[n][i]==grille[x][i] and (((n,i) not in noircies) and ((x,i) not in noircies)):#colonne
                     return False    
 
     return True
@@ -116,7 +113,7 @@ def sans_voisines_noircies(grille, noircies): #regle 2
                     if (a-x,b) in noircies and (x!=0):#haut/ bas
                         return False
                      
-                    elif (a,b-y) in noircies and (y!=0):# gauche/ droite
+                    if (a,b-y) in noircies and (y!=0):# gauche/ droite
                         return False
                       
     return True
@@ -167,18 +164,15 @@ def connexe(grille, noircies):#regle 3
    
     if total_piece != len_piece:
         return False
-    else :
-        return True
+    return True
         
 def solveur(grille,noircies,i,j):
     """Vérifie si les 3 règles valent True """
     if (sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) != True:
-       
         return None
     if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True:
         return noircies
-    elif (sans_conflit(grille,noircies) != True) and (sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True:
-        """Va considérer chaque cellule une par une, et explorer récursivement le reste de la grille, d’abord en supposant que cette cellule est noircie, puis qu’elle reste visible.  """
+    if (sans_conflit(grille,noircies) != True) and (sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True:
         if i == len(grille):
             return None
         if (i,j) not in noircies:
@@ -195,20 +189,17 @@ def solveur(grille,noircies,i,j):
                     if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
                         return noircies
                         
-                    else:
-                        noircies.discard((i,j))   
-                        if j==len(grille)-1:
-                            solveur(grille,noircies,i+1,0)
-                            
-                        if j!=len(grille)-1:
-                            solveur(grille,noircies,i,j+1)    
-                            
-                        if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
-                            return noircies 
-                            
-                        else:
-                            
-                            return None
+                    noircies.discard((i,j))   
+                    if j==len(grille)-1:
+                        solveur(grille,noircies,i+1,0)
+                        
+                    if j!=len(grille)-1:
+                        solveur(grille,noircies,i,j+1)    
+                        
+                    if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
+                        return noircies                             
+                    return None
+                    
                 elif grille[i][j]==grille[y][j] and ((y,j) not in noircies) and (i != y):#si conflit sur la meme colonne
                     
                     noircies.add((i,j))
@@ -221,19 +212,17 @@ def solveur(grille,noircies,i,j):
                     if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
                         return noircies
                         
-                    else:
-                        noircies.discard((i,j))   
-                        if j==len(grille)-1:
-                            solveur(grille,noircies,i+1,0)
-                            
-                        if j!=len(grille)-1:
-                            solveur(grille,noircies,i,j+1)    
-                            
-                        if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
-                            return noircies 
-                            
-                        else:
-                            return None  
+                    
+                    noircies.discard((i,j))   
+                    if j==len(grille)-1:
+                        solveur(grille,noircies,i+1,0)
+                        
+                    if j!=len(grille)-1:
+                        solveur(grille,noircies,i,j+1)    
+                        
+                    if (sans_conflit(grille,noircies) and sans_voisines_noircies(grille, noircies) and connexe(grille,noircies)) == True: 
+                        return noircies 
+                    return None  
         
         if j==len(grille)-1:
             solveur(grille,noircies,i+1,0)
