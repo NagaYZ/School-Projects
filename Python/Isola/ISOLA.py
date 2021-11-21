@@ -5,7 +5,7 @@ from random import randint
 
 def initplateau(n): #Créer le plateau en n*n , 'n' choisis par l'utilisateur
     res = []
-    for i in range(n):
+    for _ in range(n):
         res.append([0]*n)
     return res
 
